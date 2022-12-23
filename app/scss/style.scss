@@ -24,21 +24,22 @@
 
   &__list-link {
     color: $title;
-    padding-bottom: 1px;
+    padding-bottom: 0 2px 1px;
     transition: all .3s;
-    @extend %quicksand-400;
+    @extend %roboto-400;
+    line-height: 1.2;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
-    @extend %quicksand-500;
+    @extend %roboto-700;
   }
 }
 
@@ -169,13 +170,14 @@
   }
 }
 
-.footer-bottom{
+.footer-bottom {
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-  &__accept-img{
+
+  &__accept-img {
     display: inline;
     vertical-align: middle;
     margin-left: 25px;
