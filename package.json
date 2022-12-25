@@ -9,6 +9,7 @@
   "author": "Anastasiya",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
