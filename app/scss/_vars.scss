@@ -1,40 +1,38 @@
-$accent: #fe3e57;
-$default: #8d8d8d;
-$title: #29282d;
-$bg: #f6f6f6;
+$dark: #31352b;
+$darkblue: #363853;
+$gray: #c2c2c2;
+$silver-200: #ececec;
+$silver-100: #f9faff;
+$orange: #ff6838;
+$bg: #fff;
 
-%quicksand-400 {
-  font-family: 'Quicksand-Regular', sans-serif;
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+%rubik-500 {
+  font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
 }
 
-%quicksand-500 {
-  font-family: 'Quicksand-Medium', sans-serif;
+%rubik-500 {
+  font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
 }
 
-%roboto-400 {
-  font-family: 'Roboto-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%roboto-700 {
-  font-family: 'Roboto-Bold', sans-serif;
-  font-weight: 700;
-}
-
 %btn {
-  padding: 12px 26px;
-  background-color: $accent;
-  @extend %roboto-400;
-  text-transform: uppercase;
-  color: #fff;
-  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  padding: 7px 16px;
+  background-color: $orange;
+  @extend %rubik-400;
+  color: $bg;
+  border-radius: 6px;
 }
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
