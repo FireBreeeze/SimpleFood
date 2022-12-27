@@ -196,6 +196,91 @@
   }
 }
 
+.categories{
+  &__filter{
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__btn{
+    @extend %btn;
+    padding: 22px 32px;
+    margin-right: 20px;
+    background-color: $bg;
+    box-shadow: 0 0 0 1px $silver-200;
+    transition: box-shadow 0.5s, color 0.5s, fill 0.5s;
+    span{
+      font-size: 20px;
+      line-height: 1.3;
+      color: $darkblue;
+    }
+    &:focus{
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+    &:hover{
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      span{
+        color: $orange;
+      }
+      path{
+        fill: $orange;
+      }
+    }
+    &:active{
+      box-shadow: inset 0 -5px 12px rgba(255, 104, 56, 0.2);
+    }
+    
+  }
+  &__btn-link{
+    display: flex;
+    align-items: center;
+    span{
+      margin-left: 10px;
+    }
+  }
+  &__content{
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 210px;
+    width: 100%;
+    background-color: $bg;
+    box-shadow: 0 0 0 1px $silver-200;
+    border-radius: 5px;
+    &:hover{
+      box-shadow: 0 0 0 1px $orange;
+    }
+  }
+  &__item-text{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+    line-height: 18px;
+    color: $dark;
+    height: 66px;
+    span{
+      color: $darkblue;
+      @extend %rubik-500;
+      line-height: 1.4;
+    }
+  }
+  &__item-btn{
+    @extend %btn;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+}
+
 .footer {
   padding-top: 60px;
 
