@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARCHO</title>
+  <title>Simple Food Доставка еды</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,189 +22,242 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__inner">
+      <div class="header__top">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="logo">
+          <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
         </a>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="menu__list-link menu__list-link--active" href="#">HOME</a>
+        <div class="header__top-inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="#" class="menu__list-link">Главная</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="menu__list-link">Блюда</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="menu__list-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="user-nav">
+            <a class="user-nav__link" href="#">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="9.76657" cy="10.6301" rx="8.98856" ry="8.88424" stroke="black" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.0183 17.2706L19.5423 20.7447" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="user-nav__link" href="#">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 1L3.08 1.35582L4.04301 12.6957C4.12001 13.6218 4.90301 14.3325 5.84301 14.3295H16.752C17.649 14.3315 18.41 13.6791 18.537 12.8014L19.486 6.31954C19.592 5.59505 19.083 4.92294 18.351 4.81817C18.287 4.80927 3.414 4.80433 3.414 4.80433"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12.375 8.45758H15.1479" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.4043 17.7559C5.70527 17.7559 5.94824 17.9971 5.94824 18.2938C5.94824 18.5915 5.70527 18.8328 5.4043 18.8328C5.10333 18.8328 4.86035 18.5915 4.86035 18.2938C4.86035 17.9971 5.10333 17.7559 5.4043 17.7559Z"
+                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.6846 17.7559C16.9856 17.7559 17.2296 17.9971 17.2296 18.2938C17.2296 18.5915 16.9856 18.8328 16.6846 18.8328C16.3836 18.8328 16.1406 18.5915 16.1406 18.2938C16.1406 17.9971 16.3836 17.7559 16.6846 17.7559Z"
+                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="user-nav__num">4</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header-content" style="background-image: url(images/bg-images/header-content-bg.png);">
+
+        <div class="header-content__info">
+          <h1 class="header-content__title">Доставка</h1>
+          <h1 class="header-content__subtitle">за 15 минут</h1>
+          <div class="header-content__text">
+            <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+          </div>
+          <ul class="header-content__nav">
+            <li class="header-content__list">
+              <button class="header-content__btn btn" type="button">Заказать</button>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">SHOP</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">PAGE</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">BLOG</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">CONTACT</a>
+            <li class="header-content__list">
+              <a class="header-content__link link">Подробнее</a>
             </li>
           </ul>
-        </nav>
-        <div class="user-nav">
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__link-img" src="images/icon/user.png" alt="user btn">
-          </a>
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__link-img" src="images/icon/seach.png" alt="user btn">
-          </a>
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__link-img" src="images/icon/heart.png" alt="user btn">
-            <span class="user-nav__num">3</span>
-          </a>
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__link-img" src="images/icon/cart.png" alt="user btn">
-            <span class="user-nav__num">7</span>
-          </a>
         </div>
       </div>
     </div>
   </header>
 
   <main class="main">
-    
+
   </main>
 
   <footer class="footer">
     <div class="container">
+
       <div class="footer-top">
-        <div class="footer-top__item footer-top__contact">
-          <a class="logo footer-top__logo" href="#">
-            <img class="logo__img" src="images/logo.png" alt="logo">
-          </a>
-          <a class="footer-top__adress" href="#">No. 342 - London Oxford Street, 012 United States</a>
-          <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
-          <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
-          <ul class="footer-top__social-list">
-            <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px"
-                  height="16px" viewBox="0 0 10 16" version="1.1">
-                  <g>
-                    <path
-                      d="M 8.722656 9 L 9.167969 6.105469 L 6.390625 6.105469 L 6.390625 4.226562 C 6.390625 3.433594 6.777344 2.660156 8.023438 2.660156 L 9.285156 2.660156 L 9.285156 0.195312 C 9.285156 0.195312 8.136719 0 7.042969 0 C 4.753906 0 3.257812 1.386719 3.257812 3.898438 L 3.257812 6.105469 L 0.714844 6.105469 L 0.714844 9 L 3.257812 9 L 3.257812 16 L 6.390625 16 L 6.390625 9 Z M 8.722656 9 " />
-                  </g>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px"
-                  height="16px" viewBox="0 0 16 16" version="1.1">
-                  <g>
-                    <path
-                      d="M 14.355469 4.742188 C 14.367188 4.882812 14.367188 5.027344 14.367188 5.167969 C 14.367188 9.503906 11.066406 14.496094 5.035156 14.496094 C 3.175781 14.496094 1.453125 13.960938 0 13.027344 C 0.265625 13.054688 0.519531 13.066406 0.792969 13.066406 C 2.324219 13.066406 3.734375 12.546875 4.863281 11.664062 C 3.421875 11.632812 2.214844 10.691406 1.796875 9.390625 C 2 9.421875 2.203125 9.441406 2.417969 9.441406 C 2.710938 9.441406 3.003906 9.402344 3.277344 9.328125 C 1.777344 9.023438 0.648438 7.707031 0.648438 6.113281 L 0.648438 6.070312 C 1.085938 6.316406 1.59375 6.46875 2.132812 6.488281 C 1.25 5.898438 0.671875 4.894531 0.671875 3.757812 C 0.671875 3.148438 0.832031 2.589844 1.117188 2.101562 C 2.730469 4.089844 5.15625 5.390625 7.878906 5.53125 C 7.828125 5.289062 7.796875 5.035156 7.796875 4.78125 C 7.796875 2.976562 9.257812 1.503906 11.074219 1.503906 C 12.019531 1.503906 12.871094 1.898438 13.472656 2.539062 C 14.214844 2.394531 14.921875 2.121094 15.554688 1.746094 C 15.308594 2.507812 14.792969 3.148438 14.113281 3.554688 C 14.773438 3.480469 15.410156 3.300781 16 3.046875 C 15.554688 3.695312 14.996094 4.273438 14.355469 4.742188 Z M 14.355469 4.742188 " />
-                  </g>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px"
-                  height="16px" viewBox="0 0 14 16" version="1.1">
-                  <g>
-                    <path
-                      d="M 3.132812 14 L 0.230469 14 L 0.230469 4.652344 L 3.132812 4.652344 Z M 1.679688 3.378906 C 0.753906 3.378906 0 2.609375 0 1.679688 C 0 0.753906 0.753906 0 1.679688 0 C 2.609375 0 3.363281 0.753906 3.363281 1.679688 C 3.363281 2.609375 2.609375 3.378906 1.679688 3.378906 Z M 13.996094 14 L 11.101562 14 L 11.101562 9.449219 C 11.101562 8.367188 11.078125 6.976562 9.589844 6.976562 C 8.082031 6.976562 7.851562 8.152344 7.851562 9.371094 L 7.851562 14 L 4.953125 14 L 4.953125 4.652344 L 7.734375 4.652344 L 7.734375 5.929688 L 7.777344 5.929688 C 8.164062 5.195312 9.109375 4.417969 10.523438 4.417969 C 13.460938 4.417969 14 6.351562 14 8.867188 L 14 14 Z M 13.996094 14 " />
-                  </g>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px"
-                  height="16px" viewBox="0 0 15 15" version="1.1">
-                  <g>
-                    <path
-                      d="M 15 7.671875 C 15 11.816406 12.023438 14.765625 7.621094 14.765625 C 3.40625 14.765625 0 11.519531 0 7.5 C 0 3.480469 3.40625 0.234375 7.621094 0.234375 C 9.675781 0.234375 11.402344 0.953125 12.734375 2.136719 L 10.660156 4.039062 C 7.945312 1.539062 2.898438 3.414062 2.898438 7.5 C 2.898438 10.035156 5.023438 12.085938 7.621094 12.085938 C 10.640625 12.085938 11.773438 10.027344 11.949219 8.957031 L 7.621094 8.957031 L 7.621094 6.457031 L 14.878906 6.457031 C 14.949219 6.828125 15 7.1875 15 7.671875 Z M 15 7.671875 " />
-                  </g>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px"
-                  height="16px" viewBox="0 0 12 16" version="1.1">
-                  <g>
-                    <path
-                      d="M 6.375 0.203125 C 3.167969 0.203125 0 2.339844 0 5.800781 C 0 8 1.238281 9.25 1.988281 9.25 C 2.296875 9.25 2.476562 8.386719 2.476562 8.144531 C 2.476562 7.851562 1.734375 7.234375 1.734375 6.023438 C 1.734375 3.511719 3.648438 1.730469 6.121094 1.730469 C 8.25 1.730469 9.824219 2.941406 9.824219 5.164062 C 9.824219 6.820312 9.160156 9.933594 7.003906 9.933594 C 6.226562 9.933594 5.558594 9.371094 5.558594 8.566406 C 5.558594 7.382812 6.382812 6.242188 6.382812 5.023438 C 6.382812 2.953125 3.449219 3.328125 3.449219 5.828125 C 3.449219 6.351562 3.515625 6.933594 3.75 7.414062 C 3.320312 9.269531 2.4375 12.035156 2.4375 13.945312 C 2.4375 14.539062 2.523438 15.117188 2.578125 15.710938 C 2.683594 15.828125 2.632812 15.816406 2.792969 15.757812 C 4.367188 13.601562 4.3125 13.179688 5.023438 10.355469 C 5.410156 11.085938 6.402344 11.480469 7.191406 11.480469 C 10.507812 11.480469 12 8.246094 12 5.332031 C 12 2.226562 9.320312 0.203125 6.375 0.203125 Z M 6.375 0.203125 " />
-                  </g>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="footer-top__items">
 
-        <div class="footer-top__item footer-top__nav">
-          <h6 class="footer-top__title">Useful Links</h6>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">About Us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Privacy Policy</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Terms & Conditions</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Contact Us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Help & Support</a>
-            </li>
-          </ul>
-        </div>
+          <li class="footer-top__item">
+            <a class="logo footer-top__logo" href="#">
+              <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
+            </a>
+            <form class="footer-top__form" action="#">
+              <input class="footer-top__form-input" type="email" placeholder="Ваш email" required>
+              <button class="footer-top__form-btn" type="submit">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M9.31801 14.3001C9.05868 14.3001 8.81931 14.1616 8.70237 13.9406L6.66079 10.0822C6.54867 9.87034 6.56793 9.61684 6.71031 9.42119L10.0059 5.20009L5.53819 8.31359C5.33115 8.44879 5.06288 8.46569 4.83864 8.36039L0.756163 6.43184C0.511284 6.31549 0.362017 6.07304 0.37715 5.81434C0.391595 5.55564 0.568376 5.32944 0.825638 5.24039L13.8951 0.690388C14.1461 0.603938 14.4288 0.660488 14.6194 0.840538C14.8092 1.01929 14.8711 1.28709 14.7783 1.52499L9.96322 13.875C9.8683 14.1181 9.62961 14.2851 9.35584 14.2988C9.34346 14.2994 9.33039 14.3001 9.31801 14.3001Z"
+                    fill="black" />
+                </svg>
+                <span>Подписаться</span>
+              </button>
+            </form>
+          </li>
 
-        <div class="footer-top__item footer-top__nav">
-          <h6 class="footer-top__title">My Account</h6>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">My Account</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">My Cart</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">My WIshlist</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Registration</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Check Out</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-top__item footer-top__item-form">
-          <h6 class="footer-top__title">Subscribe Our Newsletter</h6>
-          <p class="footer-top__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna
-            aliqua. Quis ipsum suspendisse ultrices gravida.
-          </p>
-          <form class="footer-top__form" action="#">
-            <input class="footer-top__form-input" type="email" placeholder="Your email address" required>
-            <button class="footer-top__form-btn" type="submit">Subscribe</button>
-          </form>
-        </div>
+          <li class="footer-top__item">
+            <ul class="footer-top__item-list">
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Как это работает</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Продукты</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Блюда</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Меню</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer-top__item">
+            <ul class="footer-top__item-list">
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">О нас</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Новости</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Партнеры</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">ЧаВо</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer-top__item">
+            <ul class="footer-top__item-list">
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Скачать приложение</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Блог</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Что нового?</a>
+              </li>
+              <li class="footer-top__item-link">
+                <a class="footer-top__link" href="#">Карта сайта
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer-top__item">
+            <div class="footer-top__item-inner">
+
+              <address class="footer-top__contacts">
+                <ul class="footer-top__contacts-items">
+                  <li class="footer-top__contacts-item">
+                    <a class="footer-top__contacts-link" href="#">
+                      <svg width="18" height="20" viewBox="0 0 18 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.5 8.50051C11.5 7.11924 10.3808 6 9.00051 6C7.61924 6 6.5 7.11924 6.5 8.50051C6.5 9.88076 7.61924 11 9.00051 11C10.3808 11 11.5 9.88076 11.5 8.50051Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8.99951 19C7.80104 19 1.5 13.8984 1.5 8.56329C1.5 4.38664 4.8571 1 8.99951 1C13.1419 1 16.5 4.38664 16.5 8.56329C16.5 13.8984 10.198 19 8.99951 19Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>ул. Т.Г.Шевченко, 1</span>
+                    </a>
+                  </li>
+                  <li class="footer-top__contacts-item">
+                    <a class="footer-top__contacts-link" href="tel:+380501112233">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M13.353 1.5C17.054 1.911 19.978 4.831 20.393 8.532" stroke="black" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13.353 5.04297C15.124 5.38697 16.508 6.77197 16.853 8.54297" stroke="black"
+                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.0315 11.4724C14.0205 15.4604 14.9254 10.8467 17.4653 13.3848C19.9138 15.8328 21.3222 16.3232 18.2188 19.4247C17.8302 19.737 15.3613 23.4943 6.68447 14.8197C-1.99341 6.144 1.76157 3.67244 2.07394 3.28395C5.18377 0.173846 5.66682 1.58938 8.11539 4.03733C10.6541 6.5765 6.04254 7.48441 10.0315 11.4724Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>380501112233</span>
+                    </a>
+                  </li>
+                  <li class="footer-top__contacts-item">
+                    <a class="footer-top__contacts-link" href="mailto:support@sfood.com">
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <path
+                          d="M16.9026 6.8512L12.4593 10.4642C11.6198 11.1302 10.4387 11.1302 9.59919 10.4642L5.11841 6.8512"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.9089 19C18.9502 19.0084 21 16.5095 21 13.4384V6.57001C21 3.49883 18.9502 1 15.9089 1H6.09114C3.04979 1 1 3.49883 1 6.57001V13.4384C1 16.5095 3.04979 19.0084 6.09114 19H15.9089Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>support@sfood.com</span>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+
+              <ul class="footer-top__social">
+                <li class="footer-top__social-list">
+                  <a class="footer-top__social-link" href="#">
+                    <svg width="10" height="21" viewBox="0 0 10 21" fill="none">
+                      <path
+                        d="M2.54678 20.5263V10.8948H0V7.42695H2.54678V4.46499C2.54678 2.13745 4.05118 0 7.51762 0C8.92113 0 9.95896 0.13455 9.95896 0.13455L9.87718 3.3729C9.87718 3.3729 8.81876 3.3626 7.66377 3.3626C6.41371 3.3626 6.21344 3.93867 6.21344 4.89481V7.42695H9.97655L9.81281 10.8948H6.21344V20.5263H2.54678Z"
+                        fill="black" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-top__social-list">
+                  <a class="footer-top__social-link" href="#">
+                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none">
+                      <path
+                        d="M20.5263 1.98086C19.7715 2.30648 18.95 2.54082 18.1039 2.6321C18.9824 2.11021 19.6402 1.28571 19.954 0.313295C19.1297 0.80367 18.2266 1.14753 17.2849 1.32962C16.8913 0.908848 16.4153 0.573641 15.8865 0.344888C15.3577 0.116135 14.7874 -0.00126247 14.2113 1.02382e-05C11.8802 1.02382e-05 10.0054 1.88959 10.0054 4.20839C10.0054 4.534 10.0448 4.85962 10.109 5.17291C6.61845 4.99036 3.50534 3.3228 1.43568 0.769655C1.05857 1.41378 0.86095 2.14718 0.863383 2.89358C0.863383 4.35393 1.60589 5.6416 2.73816 6.39891C2.0709 6.37263 1.41926 6.18923 0.836248 5.86362V5.91542C0.836248 7.9604 2.2818 9.6551 4.20838 10.0449C3.84664 10.1388 3.47452 10.1869 3.10078 10.1879C2.82696 10.1879 2.56795 10.1608 2.30647 10.1238C2.8393 11.7914 4.39092 13.0026 6.23856 13.042C4.79301 14.1743 2.98237 14.8403 1.01633 14.8403C0.663572 14.8403 0.337953 14.828 0 14.7885C1.86491 15.9849 4.07763 16.6756 6.46057 16.6756C14.1965 16.6756 18.4295 10.2669 18.4295 4.70422C18.4295 4.52167 18.4295 4.33913 18.4172 4.15658C19.2362 3.55715 19.954 2.81464 20.5263 1.98086Z"
+                        fill="black" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-top__social-list">
+                  <a class="footer-top__social-link" href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.74756 6.49862C7.95723 6.49862 6.49618 7.95967 6.49618 9.75C6.49618 11.5403 7.95723 13.0014 9.74756 13.0014C11.5379 13.0014 12.9989 11.5403 12.9989 9.75C12.9989 7.95967 11.5379 6.49862 9.74756 6.49862ZM19.4993 9.75C19.4993 8.40359 19.5115 7.06938 19.4359 5.72541C19.3602 4.16435 19.0041 2.77891 17.8626 1.63739C16.7186 0.493433 15.3356 0.139757 13.7746 0.0641433C12.4282 -0.0114703 11.094 0.00072551 9.75 0.00072551C8.40359 0.00072551 7.06938 -0.0114703 5.72541 0.0641433C4.16435 0.139757 2.77892 0.495872 1.63739 1.63739C0.493433 2.78135 0.139757 4.16435 0.0641433 5.72541C-0.0114703 7.07182 0.00072551 8.40603 0.00072551 9.75C0.00072551 11.094 -0.0114703 12.4306 0.0641433 13.7746C0.139757 15.3356 0.495873 16.7211 1.63739 17.8626C2.78135 19.0066 4.16435 19.3602 5.72541 19.4359C7.07182 19.5115 8.40603 19.4993 9.75 19.4993C11.0964 19.4993 12.4306 19.5115 13.7746 19.4359C15.3356 19.3602 16.7211 19.0041 17.8626 17.8626C19.0066 16.7186 19.3602 15.3356 19.4359 13.7746C19.5139 12.4306 19.4993 11.0964 19.4993 9.75ZM9.74756 14.7527C6.97913 14.7527 4.74487 12.5184 4.74487 9.75C4.74487 6.98157 6.97913 4.74731 9.74756 4.74731C12.516 4.74731 14.7503 6.98157 14.7503 9.75C14.7503 12.5184 12.516 14.7527 9.74756 14.7527ZM14.9551 5.71077C14.3088 5.71077 13.7868 5.18879 13.7868 4.54242C13.7868 3.89604 14.3088 3.37407 14.9551 3.37407C15.6015 3.37407 16.1235 3.89604 16.1235 4.54242C16.1237 4.6959 16.0936 4.84792 16.035 4.98976C15.9763 5.13159 15.8903 5.26047 15.7817 5.369C15.6732 5.47753 15.5443 5.56358 15.4025 5.62223C15.2606 5.68087 15.1086 5.71096 14.9551 5.71077Z"
+                        fill="black" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-bottom__copy">© 2019 CodeAstrology. All Rights Reserved.</p>
-        <div class="footer-bottom__accept">
-          We Accept
-          <img class="footer-bottom__accept-img" src="images/icons/mastercard.png" alt="we accept mastercard">
-          <img class="footer-bottom__accept-img" src="images/icons/visa.png" alt="we accept visa">
-          <img class="footer-bottom__accept-img" src="images/icons/paypal.png" alt="we accept paypal">
-        </div>
+        <p class="footer-bottom__text">© 2022 Simple Food</p>
       </div>
 
     </div>
   </footer>
+
 
 
   <script src="js/main.min.js"></script>
