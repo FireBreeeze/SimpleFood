@@ -1,17 +1,19 @@
 html,
-body{
+body {
   height: 100%;
 }
 
 body {
+  background-color: #F9FAFF;
   font-size: 20px;
   line-height: 1.3;
   color: $darkblue;
-  @extend %quicksand-500;
+  @extend %rubik-400;
   display: flex;
   flex-direction: column;
 }
-.main{
+
+.main {
   flex-grow: 1;
 }
 
@@ -22,19 +24,18 @@ body {
 }
 
 a {
-  font-size: 16px;
-  line-height: 1.3;
   color: $dark;
-  @extend %quicksand-500;
+  @extend %rubik-400;
 }
 
-.title{
+.title {
   text-align: center;
-  @extend %roboto-700;
+  @extend %rubik-500;
   font-size: 36px;
   margin-bottom: 45px;
 }
-.text{
+
+.text {
   text-align: center;
   line-height: 1.5;
   color: $dark;
