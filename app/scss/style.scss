@@ -1,5 +1,5 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'libs';
 @import 'global';
@@ -9,85 +9,69 @@
 
   &__top {
     padding: 60px 3px 60px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center
   }
 
   &__top-inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-end;
   }
 }
 
 .logo {
-  transition: box-shadow 0.5s, drop-shadow 0.5s, color 0.5s, opacity 0.5s;
-  border: 1px solid $default;
   border-radius: 5px;
   margin-right: 15px;
-
+  transition: box-shadow 0.5s, opacity 0.5s;
   &:focus {
-    border-color: $orange;
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
 
   &:hover {
     opacity: 0.8;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   &:active {
     opacity: 0.5;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 
 .menu {
   display: flex;
-  text-align: center;
+  justify-content: space-between;
+  &__inner{
+    display: flex;
+  }
+
   &__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.2;
   }
-  &__list-item {
+
+  &__item {
     margin-right: 45px;
     padding: 10px 0;
   }
-  &__list-link {
-    transition: box-shadow 0.5s, text-shadow 0.5s, color 0.5s;
-    border: 1px solid $default;
-    border-radius: 5px;
-    &:focus {
-      border-color: $orange;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
-    &:hover {
-      color: $orange;
-    }
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    }
-  }
-}
 
-.user-nav {
-  display: flex;
-  justify-content: space-between;
-  &__link:last-child {
-    margin-right: 0;
-  }
   &__link {
-    position: relative;
-    padding: 11px 11px 5px 11px;
-    margin: 0 7px;
-    border: 1px solid $default;
-    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-    border: 1px solid $default;
+    text-decoration: none;
+  }
+  &__link--active{
+    color: $orange;
+  }
+  &__btn{
+    width: 44px;
+    height: 44px;
+    margin: 0 6px;
     border-radius: 5px;
+    position: relative;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+    &:last-child{
+      margin-right: 0;
+    }
     span {
       position: absolute;
       top: 2px;
@@ -107,24 +91,29 @@
       background-color: rgba(255, 122, 80, 0.1);
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     }
+
     &:hover {
       background-color: #FF7A50;
       stroke: $bg;
+
       path {
         fill: #FF7A50;
         stroke: $bg;
       }
+
       ellipse {
         stroke: $bg;
       }
+
       span {
         background-color: $bg;
         color: #FF7A50;
       }
     }
+
     &:active {
       background-color: #FFF2ED;
-    }
+    }    
   }
 }
 
@@ -135,117 +124,78 @@
   height: calc(100vh - 227px);
   display: flex;
   align-items: center;
+
   &__info {
     max-width: 450px;
   }
+
   &__title,
   &__subtitle {
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 66px;
     text-transform: uppercase;
   }
+
   &__subtitle {
     color: $orange;
     margin-bottom: 20px;
   }
+
   &__text {
     line-height: 1.5;
     color: $dark;
     margin-bottom: 20px;
   }
+
   &__nav {
     display: flex;
     align-items: center;
   }
+
   &__btn {
-    @extend %btn;
     margin-right: 24px;
     padding: 12px 32px;
-    border-radius: 5px;
-    &:focus{
-      color: $orange;
-      background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
-    &:hover{
-      color: $orange;
-      background-color: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
-    &:active{
-      color: $orange;
-      background-color: rgba(255, 122, 80, 0.1);
-      border-color: $default;
-    }
-  }
-  &__link {
-    @extend %link;
-    &:focus {
-      border-color: $orange;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      text-decoration: none;
-    }
-    &:hover {
-      color: $orange;
-      text-decoration: none;
-    }
-    &:active {
-      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-      text-decoration: none;
-    }
   }
 }
-
-.categories{
-  &__filter{
+.categories {
+  &__filter {
     display: flex;
     align-items: center;
     margin-bottom: 45px;
   }
-  &__btn{
-    @extend %btn;
-    padding: 22px 32px;
+
+  &__btn {
     margin-right: 20px;
-    background-color: $bg;
-    box-shadow: 0 0 0 1px $silver-200;
-    transition: box-shadow 0.5s, color 0.5s, fill 0.5s;
-    span{
-      font-size: 20px;
-      line-height: 1.3;
-      color: $darkblue;
-    }
-    &:focus{
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
-    &:hover{
-      background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      span{
-        color: $orange;
-      }
-      path{
-        fill: $orange;
-      }
-    }
-    &:active{
-      box-shadow: inset 0 -5px 12px rgba(255, 104, 56, 0.2);
-    }
-    
   }
-  &__btn-link{
+
+  &__mixitup-control-active {
+    font-size: 20px;
+    line-height: 1.2;
+    color: $bg;
+    background-color: $orange;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__btn-link {
     display: flex;
     align-items: center;
-    span{
-      margin-left: 10px;
+
+    svg {
+      margin-right: 10px;
     }
   }
-  &__content{
+
+  &__content {
     margin-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
   }
-  &__item{
+
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,11 +204,13 @@
     background-color: $bg;
     box-shadow: 0 0 0 1px $silver-200;
     border-radius: 5px;
-    &:hover{
+
+    &:hover {
       box-shadow: 0 0 0 1px $orange;
     }
   }
-  &__item-text{
+
+  &__item-text {
     margin: 10px 0;
     display: flex;
     flex-direction: column;
@@ -267,14 +219,15 @@
     line-height: 18px;
     color: $dark;
     height: 66px;
-    span{
+
+    span {
       color: $darkblue;
-      @extend %rubik-500;
+      font-weight: 500;
       line-height: 1.4;
     }
   }
-  &__item-btn{
-    @extend %btn;
+
+  &__item-btn {
     font-size: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -288,25 +241,30 @@
 
 .footer-top {
   padding-bottom: 60px;
-  &__items{
+
+  &__items {
     display: flex;
     justify-content: space-between;
   }
-  &__item{
-    &:not(:last-child){
+
+  &__item {
+    &:not(:last-child) {
       margin-right: 30px;
     }
   }
-  &__logo{
+
+  &__logo {
     display: block;
     margin-right: 0;
     margin-bottom: 30px;
   }
-  &__form{
+
+  &__form {
     max-width: 200px;
     width: 100%;
   }
-  &__form-input{
+
+  &__form-input {
     border: 1px solid #C2C2C2;
     border-radius: 5px;
     background-color: $bg;
@@ -315,86 +273,70 @@
     width: 100%;
     margin-bottom: 12px;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
-    &::placeholder{
+
+    &::placeholder {
       font-size: 14px;
       color: #c2c2c2;
       opacity: 0.9;
     }
-    &:focus{
+
+    &:focus {
       box-shadow: 0 0 0 2px $orange;
     }
-    &:hover{
-      &::placeholder{
+
+    &:hover {
+      &::placeholder {
         color: $darkblue;
       }
     }
-    &:active{}
+    
   }
-  &__form-btn{
+
+  &__form-btn {
     display: flex;
-    justify-content: space-between;
-    @extend %btn;
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 14px;
     padding: 13px 38px 13px 38px;
-    border-radius: 5px;
     max-width: 200px;
     width: 100%;
-    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
-    span{
-      margin-left: 15px;
+    svg {
+      margin-right: 15px;
     }
-    path{
+
+    path {
       fill: $bg;
     }
-    &:focus{
-      color: $orange;
-      background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      path{
-        fill: $orange;
-      }
-    }
-    &:hover{
-      color: $orange;
-      background-color: $bg;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      path{
-        fill: $orange;
-      }
-    }
-    &:active{
-      color: $orange;
-      background-color: #fff2ed;
-      path{
-        fill: $orange;
-      }
-    }
   }
-  &__item-link{
+
+  &__item-link {
     font-size: 18px;
     margin-bottom: 20px;
     letter-spacing: 0.01em;
   }
-  &__contacts-item{
+
+  &__contacts-item {
     font-style: normal;
     font-size: 16px;
     line-height: 2;
     margin-bottom: 15px;
   }
-  &__contacts-link{
+
+  &__contacts-link {
     display: flex;
     align-items: center;
-    span{
+
+    span {
       margin-left: 7px;
-    }  
+    }
   }
-  &__social{
+
+  &__social {
     display: flex;
     text-align: center;
     margin: auto 0;
   }
-  &__social-list{
+
+  &__social-list {
     border-radius: 50%;
     border: 1px solid $default;
     width: 39px;
@@ -402,22 +344,28 @@
     padding-top: 8px;
     background-color: $silver-200;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-right: 13px;
     }
-    &:focus{
+
+    &:focus {
       background-color: #fff2ed;
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     }
-    &:hover{
+
+    &:hover {
       background-color: #ff7A50;
-      path{
+
+      path {
         fill: $bg;
       }
     }
-    &:active{
+
+    &:active {
       background-color: #fff2ed;
-      path{
+
+      path {
         fill: #ff7a50;
       }
     }
@@ -433,4 +381,5 @@
     color: $dark;
   }
 }
-@import 'media'
+
+

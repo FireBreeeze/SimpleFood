@@ -8,7 +8,8 @@ body {
   font-size: 20px;
   line-height: 1.3;
   color: $darkblue;
-  @extend %rubik-400;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -25,14 +26,14 @@ body {
 
 a {
   color: $dark;
-  @extend %rubik-400;
 }
 
 .title {
   text-align: center;
-  @extend %rubik-500;
+  font-weight: 500;
   font-size: 36px;
   margin-bottom: 45px;
+  text-align: center;
 }
 
 .text {
@@ -41,16 +42,105 @@ a {
   color: $dark;
   opacity: 0.9;
 }
-.section{
+
+.section {
   padding: 60px 0;
   text-align: center;
 }
-.mixitup-control-active{
-  font-size: 20px;
-  line-height: 1.2;
-  color: $bg;
+
+.btn {
+  padding: 7px 16px;
   background-color: $orange;
+  color: $bg;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, fill 0.5s;
+
+  &:focus {
+    color: $orange;
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+    path {
+      fill: $orange;
+    }
+  }
+
+  &:hover {
+    color: $orange;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+    path {
+      fill: $orange;
+    }
+  }
+
+  &:active {
+    color: $orange;
+    background-color: #ff7a501a;
+    border-color: $default;
+
+    path {
+      fill: $orange;
+    }
+  }
 }
+
+.button {
+  padding: 22px 32px;
+  border-radius: 5px;
+  background-color: $bg;
+  box-shadow: 0 0 0 1px $silver-200;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+
+  &:hover {
+    color: $orange;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+    path {
+      fill: $orange;
+    }
+  }
+
+  &:active {
+    box-shadow: inset 0 -5px 12px rgba(255, 104, 56, 0.2);
+  }
+}
+
+.link {
+  line-height: 1.5;
+  text-decoration: underline;
+  color: $darkblue;
+  border-radius: 5px;
+  transition: box-shadow 0.5s, text-shadow 0.5s, color 0.5s;
+
+  &:focus {
+    border-color: $orange;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    text-decoration: none;
+  }
+}
+
+
+
 
 // .sr-only {
 //   position: absolute;

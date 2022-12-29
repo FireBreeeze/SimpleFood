@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Food Доставка еды</title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
@@ -23,48 +23,53 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
-        </a>
+
         <div class="header__top-inner">
           <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Главная</a>
-              </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Блюда</a>
-              </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Контакты</a>
-              </li>
-            </ul>
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
+            </a>
+            <div class="menu__inner">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link link menu__link--active">Главная</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link link">Блюда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link link">Контакты</a>
+                </li>
+              </ul>
+              <button class="menu__btn" type="button">
+                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="9.76657" cy="10.6301" rx="8.98856" ry="8.88424" stroke="black" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16.0183 17.2706L19.5423 20.7447" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="menu__btn" type="button">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 1L3.08 1.35582L4.04301 12.6957C4.12001 13.6218 4.90301 14.3325 5.84301 14.3295H16.752C17.649 14.3315 18.41 13.6791 18.537 12.8014L19.486 6.31954C19.592 5.59505 19.083 4.92294 18.351 4.81817C18.287 4.80927 3.414 4.80433 3.414 4.80433"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.375 8.45758H15.1479" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.4043 17.7559C5.70527 17.7559 5.94824 17.9971 5.94824 18.2938C5.94824 18.5915 5.70527 18.8328 5.4043 18.8328C5.10333 18.8328 4.86035 18.5915 4.86035 18.2938C4.86035 17.9971 5.10333 17.7559 5.4043 17.7559Z"
+                    fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.6846 17.7559C16.9856 17.7559 17.2296 17.9971 17.2296 18.2938C17.2296 18.5915 16.9856 18.8328 16.6846 18.8328C16.3836 18.8328 16.1406 18.5915 16.1406 18.2938C16.1406 17.9971 16.3836 17.7559 16.6846 17.7559Z"
+                    fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="user-nav__num">4</span>
+              </button>
+            </div>
+
           </nav>
           <nav class="user-nav">
-            <a class="user-nav__link" href="#">
-              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="9.76657" cy="10.6301" rx="8.98856" ry="8.88424" stroke="black" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.0183 17.2706L19.5423 20.7447" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-            <a class="user-nav__link" href="#">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1 1L3.08 1.35582L4.04301 12.6957C4.12001 13.6218 4.90301 14.3325 5.84301 14.3295H16.752C17.649 14.3315 18.41 13.6791 18.537 12.8014L19.486 6.31954C19.592 5.59505 19.083 4.92294 18.351 4.81817C18.287 4.80927 3.414 4.80433 3.414 4.80433"
-                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12.375 8.45758H15.1479" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M5.4043 17.7559C5.70527 17.7559 5.94824 17.9971 5.94824 18.2938C5.94824 18.5915 5.70527 18.8328 5.4043 18.8328C5.10333 18.8328 4.86035 18.5915 4.86035 18.2938C4.86035 17.9971 5.10333 17.7559 5.4043 17.7559Z"
-                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M16.6846 17.7559C16.9856 17.7559 17.2296 17.9971 17.2296 18.2938C17.2296 18.5915 16.9856 18.8328 16.6846 18.8328C16.3836 18.8328 16.1406 18.5915 16.1406 18.2938C16.1406 17.9971 16.3836 17.7559 16.6846 17.7559Z"
-                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              <span class="user-nav__num">4</span>
-            </a>
+
           </nav>
         </div>
       </div>
@@ -97,7 +102,7 @@
         <h2 class="title">Популярные категории</h2>
 
         <ul class="categories__filter">
-          <li class="categories__btn">
+          <li class="categories__btn button categories__mixitup-control-active">
             <button class="categories__btn-link" type="button" data-filter=".burger">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_756)">
@@ -123,10 +128,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Бургеры</span>
+              Бургеры
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn  button">
             <button class="categories__btn-link" type="button" data-filter=".pizza">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_763)">
@@ -158,10 +163,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Пицца</span>
+              Пицца
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".sandwiches">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_785)">
@@ -196,10 +201,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Сендвичи</span>
+              Сендвичи
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".asian">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_808)">
@@ -239,10 +244,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Азиатская кухня</span>
+              Азиатская кухня
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".sets">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_820)">
@@ -283,8 +288,7 @@
                   </clipPath>
                 </defs>
               </svg>
-
-              <span>Cеты</span>
+              Cеты
             </button>
           </li>
         </ul>
@@ -296,7 +300,7 @@
               <p>Чизбургер с листьями салата</p>
               <span>160 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
@@ -305,7 +309,7 @@
               <p>Бифбургер</p>
               <span>190 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
@@ -314,7 +318,7 @@
               <p>Королевский чизбургер</p>
               <span>260 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
@@ -323,7 +327,7 @@
               <p>Черный гамбургер</p>
               <span>199 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
@@ -332,7 +336,7 @@
               <p>Чикен бургер</p>
               <span>180 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
@@ -341,7 +345,7 @@
               <p>Чизбургер с листьями салата</p>
               <span>160 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger sets data-fancybox="categories">
@@ -350,7 +354,7 @@
               <p>Бифбургер</p>
               <span>190 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger pizza data-fancybox="categories">
@@ -359,7 +363,7 @@
               <p>Королевский чизбургер</p>
               <span>260 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger sandwiches data-fancybox="categories">
@@ -368,7 +372,7 @@
               <p>Черный гамбургер</p>
               <span>199 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
 
           <li class="categories__item" mix burger asian data-fancybox="categories">
@@ -377,10 +381,10 @@
               <p>Чикен бургер</p>
               <span>180 грн.</span>
             </div>
-            <button class="categories__item-btn">В корзину</button>
+            <button class="categories__item-btn btn">В корзину</button>
           </li>
         </ul>
-        <a class="header-content__link link">Показать еще</a>
+        <a class="categories__link link">Показать еще</a>
       </div>
     </section>
 
@@ -398,13 +402,13 @@
             </a>
             <form class="footer-top__form" action="#">
               <input class="footer-top__form-input" type="email" placeholder="Ваш email" required>
-              <button class="footer-top__form-btn" type="submit">
+              <button class="footer-top__form-btn btn" type="submit">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                   <path
                     d="M9.31801 14.3001C9.05868 14.3001 8.81931 14.1616 8.70237 13.9406L6.66079 10.0822C6.54867 9.87034 6.56793 9.61684 6.71031 9.42119L10.0059 5.20009L5.53819 8.31359C5.33115 8.44879 5.06288 8.46569 4.83864 8.36039L0.756163 6.43184C0.511284 6.31549 0.362017 6.07304 0.37715 5.81434C0.391595 5.55564 0.568376 5.32944 0.825638 5.24039L13.8951 0.690388C14.1461 0.603938 14.4288 0.660488 14.6194 0.840538C14.8092 1.01929 14.8711 1.28709 14.7783 1.52499L9.96322 13.875C9.8683 14.1181 9.62961 14.2851 9.35584 14.2988C9.34346 14.2994 9.33039 14.3001 9.31801 14.3001Z"
                     fill="black" />
                 </svg>
-                <span>Подписаться</span>
+                Подписаться
               </button>
             </form>
           </li>
