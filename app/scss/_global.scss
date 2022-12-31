@@ -8,7 +8,7 @@ body {
   font-size: 20px;
   line-height: 1.3;
   color: $darkblue;
-  font-family: Rubik, sans-serif;
+  font-family: Rubik;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,6 @@ a {
   font-weight: 500;
   font-size: 36px;
   margin-bottom: 45px;
-  text-align: center;
 }
 
 .text {
@@ -45,7 +44,6 @@ a {
 
 .section {
   padding: 60px 0;
-  text-align: center;
 }
 
 .btn {
@@ -126,6 +124,10 @@ a {
     border-color: $orange;
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     text-decoration: none;
+
+    path {
+      fill: $orange;
+    }
   }
 
   &:hover {
@@ -139,18 +141,27 @@ a {
   }
 }
 
+.icon-seach {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/sprite.svg#icon-search'); // иконка из спрайта
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  fill: #fff;
+  stroke: #000;
+}
 
-
-
-// .sr-only {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   white-space: nowrap;
-//   clip-path: inset(100%);
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

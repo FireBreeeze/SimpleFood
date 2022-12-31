@@ -8,23 +8,17 @@
   padding-bottom: 60px;
 
   &__top {
-    padding: 60px 3px 60px 5px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center
+    padding: 50px 3px 60px 5px;
   }
-
-  &__top-inner {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: flex-end;
+  &__logo{
+    margin-right: auto;
   }
 }
 
 .logo {
   border-radius: 5px;
-  margin-right: 15px;
   transition: box-shadow 0.5s, opacity 0.5s;
+
   &:focus {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }
@@ -40,17 +34,15 @@
 
 .menu {
   display: flex;
-  justify-content: space-between;
-  &__inner{
+  
+  &__inner {
     display: flex;
   }
-
-  &__list {
-    display: flex;
-    font-size: 18px;
-    line-height: 1.2;
-  }
-
+}
+.menu-list{
+  display: flex;
+  font-size: 18px;
+  line-height: 1.2;
   &__item {
     margin-right: 45px;
     padding: 10px 0;
@@ -59,19 +51,26 @@
   &__link {
     text-decoration: none;
   }
-  &__link--active{
+
+  &__link--active {
     color: $orange;
   }
-  &__btn{
+}
+.menu-btn{
+  display: flex;
+  
+  &__btn {
     width: 44px;
     height: 44px;
     margin: 0 6px;
     border-radius: 5px;
     position: relative;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
+
     span {
       position: absolute;
       top: 2px;
@@ -87,6 +86,7 @@
       display: block;
       text-align: center;
     }
+
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -113,32 +113,30 @@
 
     &:active {
       background-color: #FFF2ED;
-    }    
+    }
   }
 }
 
 .header-content {
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: contain;
-  height: calc(100vh - 227px);
-  display: flex;
-  align-items: center;
+  &__inner {
+    height: calc(100vh - 227px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__info {
     max-width: 450px;
   }
 
-  &__title,
-  &__subtitle {
+  &__title {
     font-weight: 500;
     font-size: 66px;
     text-transform: uppercase;
-  }
-
-  &__subtitle {
-    color: $orange;
     margin-bottom: 20px;
+    span{
+      color: $orange;
+    }
   }
 
   &__text {
@@ -147,16 +145,12 @@
     margin-bottom: 20px;
   }
 
-  &__nav {
-    display: flex;
-    align-items: center;
-  }
-
   &__btn {
     margin-right: 24px;
     padding: 12px 32px;
   }
 }
+
 .categories {
   &__filter {
     display: flex;
@@ -194,43 +188,53 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
   }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 210px;
-    width: 100%;
-    background-color: $bg;
-    box-shadow: 0 0 0 1px $silver-200;
-    border-radius: 5px;
-
-    &:hover {
-      box-shadow: 0 0 0 1px $orange;
-    }
+  &__link{
+    display: block;
+    text-align: center;
   }
+}
 
-  &__item-text {
-    margin: 10px 0;
+.product-card{
+  padding: 20px 15px 27px;
+  max-width: 210px;
+  width: 100%;
+  height: 100%;
+  background-color: $bg;
+  box-shadow: 0 0 0 1px $silver-200;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  &__img{
+    margin: 0 auto 10px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  &__title{
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $dark;
+    max-height: 66px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 15px;
-    line-height: 18px;
-    color: $dark;
-    height: 66px;
-
-    span {
-      color: $darkblue;
-      font-weight: 500;
-      line-height: 1.4;
-    }
+  }
+  &__price{
+    display: block;
+    color: $darkblue;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: auto;
+  }
+  &__btn{
+    font-size: 14px;
   }
 
-  &__item-btn {
-    font-size: 14px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+  &:hover {
+    box-shadow: 0 0 0 1px $orange;
   }
 }
 
@@ -241,17 +245,30 @@
 
 .footer-top {
   padding-bottom: 60px;
+  display: flex;
+  &__form-inner{
+    margin-right: 70px;
+  }
 
   &__items {
     display: flex;
     justify-content: space-between;
+    max-height: 175px;
+    height: 100%;
+    width: 100%;
+    max-width: 571px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-count: 3;
+    gap: 10px 70px;
+    margin-right: 70px;
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
+  // &__item {
+  //   &:not(:last-child) {
+  //     margin-right: 30px;
+  //   }
+  // }
 
   &__logo {
     display: block;
@@ -265,23 +282,25 @@
   }
 
   &__form-input {
-    border: 1px solid #C2C2C2;
+    border: 1px solid $gray;
     border-radius: 5px;
     background-color: $bg;
-    padding: 13px 15px;
+    padding: 13px 14px;
+    font-size: 14px;
+    height: 44px;
     max-width: 200px;
     width: 100%;
     margin-bottom: 12px;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
 
     &::placeholder {
-      font-size: 14px;
       color: #c2c2c2;
       opacity: 0.9;
     }
 
     &:focus {
       box-shadow: 0 0 0 2px $orange;
+      border: 1px solid $default;
     }
 
     &:hover {
@@ -289,18 +308,22 @@
         color: $darkblue;
       }
     }
-    
+
   }
 
   &__form-btn {
     display: flex;
     font-weight: 500;
     font-size: 14px;
+    height: 44px;
     padding: 13px 38px 13px 38px;
     max-width: 200px;
     width: 100%;
+
     svg {
       margin-right: 15px;
+      width: 15px;
+      height: 14px;
     }
 
     path {
@@ -310,8 +333,13 @@
 
   &__item-link {
     font-size: 18px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     letter-spacing: 0.01em;
+    margin-bottom: 5px;
+  }
+  &__link{
+    text-decoration: none;
+    padding: 10px 0;
   }
 
   &__contacts-item {
@@ -324,6 +352,7 @@
   &__contacts-link {
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     span {
       margin-left: 7px;
@@ -375,11 +404,11 @@
 .footer-bottom {
   padding: 30px 0;
   text-align: center;
+  border-top: 1px solid $gray;
+
   &__text {
     font-size: 14px;
     line-height: 1;
     color: $dark;
   }
 }
-
-
