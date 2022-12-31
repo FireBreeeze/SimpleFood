@@ -3,15 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Food Доставка еды</title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
@@ -21,83 +20,93 @@
 <body>
 
   <header class="header">
-    <div class="container">
-      <div class="header__top">
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
-        </a>
-        <div class="header__top-inner">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Главная</a>
+
+
+    <div class="header__top">
+      <div class="container">
+        <nav class="menu">
+          <a class="header__logo logo" href="#">
+            <img class="logo__img" src="images/logo/logo.svg" width="200" height="39" alt="логотип компании">
+          </a>
+          <div class="menu__inner">
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <a href="#" class="menu-list__link link menu-list__link--active">Главная</a>
               </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Блюда</a>
+              <li class="menu-list__item">
+                <a href="#" class="menu-list__link link">Блюда</a>
               </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link">Контакты</a>
+              <li class="menu-list__item">
+                <a href="#" class="menu-list__link link">Контакты</a>
               </li>
             </ul>
-          </nav>
-          <nav class="user-nav">
-            <a class="user-nav__link" href="#">
-              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="9.76657" cy="10.6301" rx="8.98856" ry="8.88424" stroke="black" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M16.0183 17.2706L19.5423 20.7447" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-            <a class="user-nav__link" href="#">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1 1L3.08 1.35582L4.04301 12.6957C4.12001 13.6218 4.90301 14.3325 5.84301 14.3295H16.752C17.649 14.3315 18.41 13.6791 18.537 12.8014L19.486 6.31954C19.592 5.59505 19.083 4.92294 18.351 4.81817C18.287 4.80927 3.414 4.80433 3.414 4.80433"
-                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12.375 8.45758H15.1479" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M5.4043 17.7559C5.70527 17.7559 5.94824 17.9971 5.94824 18.2938C5.94824 18.5915 5.70527 18.8328 5.4043 18.8328C5.10333 18.8328 4.86035 18.5915 4.86035 18.2938C4.86035 17.9971 5.10333 17.7559 5.4043 17.7559Z"
-                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M16.6846 17.7559C16.9856 17.7559 17.2296 17.9971 17.2296 18.2938C17.2296 18.5915 16.9856 18.8328 16.6846 18.8328C16.3836 18.8328 16.1406 18.5915 16.1406 18.2938C16.1406 17.9971 16.3836 17.7559 16.6846 17.7559Z"
-                  fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              <span class="user-nav__num">4</span>
-            </a>
-          </nav>
-        </div>
-      </div>
-
-      <div class="header-content" style="background-image: url(images/bg-images/header-content-bg.png);">
-
-        <div class="header-content__info">
-          <h1 class="header-content__title">Доставка</h1>
-          <h1 class="header-content__subtitle">за 15 минут</h1>
-          <div class="header-content__text">
-            <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+            <ul class="menu-btn">
+              <li class="menu-btn__item">
+                <button class="menu-btn__btn" type="button">
+                  <svg class="icon-seach">
+                    <use xlink:href="images/sprite.svg#icon-search" height="22" viewBox="0 0 21 22"></use>
+                  </svg>
+                  <!-- <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="9.76657" cy="10.6301" rx="8.98856" ry="8.88424" stroke="black" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16.0183 17.2706L19.5423 20.7447" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg> -->
+                </button>
+              </li>
+              <li class="menu-btn__item">
+                <button class="menu-btn__btn" type="button">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 1L3.08 1.35582L4.04301 12.6957C4.12001 13.6218 4.90301 14.3325 5.84301 14.3295H16.752C17.649 14.3315 18.41 13.6791 18.537 12.8014L19.486 6.31954C19.592 5.59505 19.083 4.92294 18.351 4.81817C18.287 4.80927 3.414 4.80433 3.414 4.80433"
+                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.375 8.45758H15.1479" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.4043 17.7559C5.70527 17.7559 5.94824 17.9971 5.94824 18.2938C5.94824 18.5915 5.70527 18.8328 5.4043 18.8328C5.10333 18.8328 4.86035 18.5915 4.86035 18.2938C4.86035 17.9971 5.10333 17.7559 5.4043 17.7559Z"
+                      fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M16.6846 17.7559C16.9856 17.7559 17.2296 17.9971 17.2296 18.2938C17.2296 18.5915 16.9856 18.8328 16.6846 18.8328C16.3836 18.8328 16.1406 18.5915 16.1406 18.2938C16.1406 17.9971 16.3836 17.7559 16.6846 17.7559Z"
+                      fill="black" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>4</span>
+                </button>
+              </li>
+            </ul>
           </div>
-          <ul class="header-content__nav">
-            <li class="header-content__list">
-              <button class="header-content__btn btn" type="button">Заказать</button>
-            </li>
-            <li class="header-content__list">
-              <a class="header-content__link link">Подробнее</a>
-            </li>
-          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header-content">
+      <div class="container">
+        <div class="header-content__inner">
+          <div class="header-content__info">
+            <h1></h1>
+            <h2 class="header-content__title">
+              Доставка
+            <span>за 15 минут</span>
+            </h2>
+            <div class="header-content__text">
+              <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+            </div>
+              <a class="header-content__btn btn" href="#">Заказать</a>
+              <a class="header-content__link link" href="#">Подробнее</a>
+            </div>
+          <img src="images/bg-images/header-content-bg.png" width="560" height="660" alt="фотография курьера">
         </div>
       </div>
     </div>
   </header>
 
-  <main class="main">
+  <main cldass="main">
 
     <section class="categories section">
       <div class="container">
         <h2 class="title">Популярные категории</h2>
 
         <ul class="categories__filter">
-          <li class="categories__btn">
+          <li class="categories__btn button categories__mixitup-control-active">
             <button class="categories__btn-link" type="button" data-filter=".burger">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_756)">
@@ -123,10 +132,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Бургеры</span>
+              Бургеры
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn  button">
             <button class="categories__btn-link" type="button" data-filter=".pizza">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_763)">
@@ -158,10 +167,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Пицца</span>
+              Пицца
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".sandwiches">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_785)">
@@ -196,10 +205,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Сендвичи</span>
+              Сендвичи
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".asian">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_808)">
@@ -239,10 +248,10 @@
                   </clipPath>
                 </defs>
               </svg>
-              <span>Азиатская кухня</span>
+              Азиатская кухня
             </button>
           </li>
-          <li class="categories__btn">
+          <li class="categories__btn button">
             <button class="categories__btn-link" type="button" data-filter=".sets">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_669_820)">
@@ -283,104 +292,127 @@
                   </clipPath>
                 </defs>
               </svg>
-
-              <span>Cеты</span>
+              Cеты
             </button>
           </li>
         </ul>
 
         <ul class="categories__content">
-          <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/1.jpg" alt="чизбургер с листьями салата">
-            <div class="categories__item-text">
-              <p>Чизбургер с листьями салата</p>
-              <span>160 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+          <li class="categories__item" mix burger sets data-fancybox="categories">
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/1.jpg" width="140" height="140" alt="чизбургер с листьями салата">
+                <h3 class="product-card__title">
+                  Чизбургер с листьями салата
+                  <span class="product-card__price">160 грн.</span>
+                </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/2.jpg" alt="Бифбургер">
-            <div class="categories__item-text">
-              <p>Бифбургер</p>
-              <span>190 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/2.jpg" width="140" height="140" alt="Бифбургер">
+                <h3 class="product-card__title">
+                  Бифбургер
+                  <span class="product-card__price">190 грн.</span>
+                </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/3.jpg" alt="Королевский чизбургер">
-            <div class="categories__item-text">
-              <p>Королевский чизбургер</p>
-              <span>260 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/3.jpg" width="140" height="140" alt="Королевский чизбургер">
+                <h3 class="product-card__title">
+                  Королевский чизбургер
+                  <span class="product-card__price">260 грн.</span>
+                </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/4.jpg" alt="Черный гамбургер">
-            <div class="categories__item-text">
-              <p>Черный гамбургер</p>
-              <span>199 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/4.jpg" width="140" height="140" alt="Черный гамбургер">
+                <h3 class="product-card__title">
+                  Черный гамбургер
+                  <span class="product-card__price">199 грн.</span>
+                </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
           <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/5.jpg" alt="Чикен бургер">
-            <div class="categories__item-text">
-              <p>Чикен бургер</p>
-              <span>180 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
-          </li>
-
-          <li class="categories__item" mix burger data-fancybox="categories">
-            <img src="images/categories/content/1.jpg" alt="чизбургер с листьями салата">
-            <div class="categories__item-text">
-              <p>Чизбургер с листьями салата</p>
-              <span>160 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/5.jpg" width="140" height="140" alt="Чикен бургер">
+                <h3 class="product-card__title">
+                  Чикен бургер
+                  <span class="product-card__price">180 грн.</span>
+                </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
           <li class="categories__item" mix burger sets data-fancybox="categories">
-            <img src="images/categories/content/2.jpg" alt="чизбургер с листьями салата">
-            <div class="categories__item-text">
-              <p>Бифбургер</p>
-              <span>190 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/1.jpg" width="140" height="140"
+                alt="чизбургер с листьями салата">
+              <h3 class="product-card__title">
+                Чизбургер с листьями салата
+                <span class="product-card__price">160 грн.</span>
+              </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
+          </li>
+          
+          <li class="categories__item" mix burger data-fancybox="categories">
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/2.jpg" width="140" height="140" alt="Бифбургер">
+              <h3 class="product-card__title">
+                Бифбургер
+                <span class="product-card__price">190 грн.</span>
+              </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
+          </li>
+          
+          <li class="categories__item" mix burger data-fancybox="categories">
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/3.jpg" width="140" height="140"
+                alt="Королевский чизбургер">
+              <h3 class="product-card__title">
+                Королевский чизбургер
+                <span class="product-card__price">260 грн.</span>
+              </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
+          </li>
+          
+          <li class="categories__item" mix burger data-fancybox="categories">
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/4.jpg" width="140" height="140"
+                alt="Черный гамбургер">
+              <h3 class="product-card__title">
+                Черный гамбургер
+                <span class="product-card__price">199 грн.</span>
+              </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
+          </li>
+          
+          <li class="categories__item" mix burger data-fancybox="categories">
+            <article class="product-card">
+              <img class="product-card__img" src="images/categories/content/5.jpg" width="140" height="140" alt="Чикен бургер">
+              <h3 class="product-card__title">
+                Чикен бургер
+                <span class="product-card__price">180 грн.</span>
+              </h3>
+              <button class="product-card__btn btn" type="button">В корзину</button>
+            </article>
           </li>
 
-          <li class="categories__item" mix burger pizza data-fancybox="categories">
-            <img src="images/categories/content/3.jpg" alt="чизбургер с листьями салата">
-            <div class="categories__item-text">
-              <p>Королевский чизбургер</p>
-              <span>260 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
-          </li>
-
-          <li class="categories__item" mix burger sandwiches data-fancybox="categories">
-            <img src="images/categories/content/4.jpg" alt="Черный гамбургер">
-            <div class="categories__item-text">
-              <p>Черный гамбургер</p>
-              <span>199 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
-          </li>
-
-          <li class="categories__item" mix burger asian data-fancybox="categories">
-            <img src="images/categories/content/5.jpg" alt="Чикен бургер">
-            <div class="categories__item-text">
-              <p>Чикен бургер</p>
-              <span>180 грн.</span>
-            </div>
-            <button class="categories__item-btn">В корзину</button>
-          </li>
         </ul>
-        <a class="header-content__link link">Показать еще</a>
+        <a class="categories__link link" href="#">Показать еще</a>
       </div>
     </section>
 
@@ -390,84 +422,84 @@
     <div class="container">
 
       <div class="footer-top">
-        <ul class="footer-top__items">
 
-          <li class="footer-top__item">
-            <a class="logo footer-top__logo" href="#">
-              <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
+        <div class="footer-top__form-inner">
+          <a class="logo footer-top__logo" href="#">
+              <img class="logo__img" src="images/logo/logo.svg" width="200" height="39" alt="логотип компании">
             </a>
             <form class="footer-top__form" action="#">
               <input class="footer-top__form-input" type="email" placeholder="Ваш email" required>
-              <button class="footer-top__form-btn" type="submit">
+              <button class="footer-top__form-btn btn" type="submit">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                   <path
                     d="M9.31801 14.3001C9.05868 14.3001 8.81931 14.1616 8.70237 13.9406L6.66079 10.0822C6.54867 9.87034 6.56793 9.61684 6.71031 9.42119L10.0059 5.20009L5.53819 8.31359C5.33115 8.44879 5.06288 8.46569 4.83864 8.36039L0.756163 6.43184C0.511284 6.31549 0.362017 6.07304 0.37715 5.81434C0.391595 5.55564 0.568376 5.32944 0.825638 5.24039L13.8951 0.690388C14.1461 0.603938 14.4288 0.660488 14.6194 0.840538C14.8092 1.01929 14.8711 1.28709 14.7783 1.52499L9.96322 13.875C9.8683 14.1181 9.62961 14.2851 9.35584 14.2988C9.34346 14.2994 9.33039 14.3001 9.31801 14.3001Z"
                     fill="black" />
                 </svg>
-                <span>Подписаться</span>
+                Подписаться
               </button>
             </form>
-          </li>
+        </div>
 
-          <li class="footer-top__item">
-            <ul class="footer-top__item-list">
+        <ul class="footer-top__items">
+            <!-- <li class="footer-top__item"> -->
+            <!-- <ul class="footer-top__item-list"> -->
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Как это работает</a>
+                <a class="footer-top__link link" href="#">Как это работает</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Продукты</a>
+                <a class="footer-top__link  link" href="#">Продукты</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Блюда</a>
+                <a class="footer-top__link  link" href="#">Блюда</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Меню</a>
+                <a class="footer-top__link  link" href="#">Меню</a>
               </li>
-            </ul>
-          </li>
+            <!-- </ul> -->
+          <!-- </li> -->
 
-          <li class="footer-top__item">
-            <ul class="footer-top__item-list">
+          <!-- <li class="footer-top__item"> -->
+            <!-- <ul class="footer-top__item-list"> -->
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">О нас</a>
+                <a class="footer-top__link link" href="#">О нас</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Новости</a>
+                <a class="footer-top__link link" href="#">Новости</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Партнеры</a>
+                <a class="footer-top__link link" href="#">Партнеры</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">ЧаВо</a>
+                <a class="footer-top__link link" href="#">ЧаВо</a>
               </li>
-            </ul>
-          </li>
+            <!-- </ul> -->
+          <!-- </li> -->
 
-          <li class="footer-top__item">
-            <ul class="footer-top__item-list">
+          <!-- <li class="footer-top__item"> -->
+            <!-- <ul class="footer-top__item-list"> -->
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Скачать приложение</a>
+                <a class="footer-top__link link" href="#">Скачать приложение</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Блог</a>
+                <a class="footer-top__link link" href="#">Блог</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Что нового?</a>
+                <a class="footer-top__link link" href="#">Что нового?</a>
               </li>
               <li class="footer-top__item-link">
-                <a class="footer-top__link" href="#">Карта сайта
+                <a class="footer-top__link link" href="#">Карта сайта
                 </a>
               </li>
-            </ul>
-          </li>
-
-          <li class="footer-top__item">
-            <div class="footer-top__item-inner">
+            <!-- </ul> -->
+          <!-- </li> -->
+  </ul>
+          
+            <div class="footer-top__adress-inner">
 
               <address class="footer-top__contacts">
                 <ul class="footer-top__contacts-items">
                   <li class="footer-top__contacts-item">
-                    <a class="footer-top__contacts-link" href="#">
+                    <a class="footer-top__contacts-link link" href="#">
                       <svg width="18" height="20" viewBox="0 0 18 20" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M11.5 8.50051C11.5 7.11924 10.3808 6 9.00051 6C7.61924 6 6.5 7.11924 6.5 8.50051C6.5 9.88076 7.61924 11 9.00051 11C10.3808 11 11.5 9.88076 11.5 8.50051Z"
@@ -480,7 +512,7 @@
                     </a>
                   </li>
                   <li class="footer-top__contacts-item">
-                    <a class="footer-top__contacts-link" href="tel:+380501112233">
+                    <a class="footer-top__contacts-link link" href="tel:+380501112233">
                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M13.353 1.5C17.054 1.911 19.978 4.831 20.393 8.532" stroke="black" stroke-width="1.5"
                           stroke-linecap="round" stroke-linejoin="round" />
@@ -494,7 +526,7 @@
                     </a>
                   </li>
                   <li class="footer-top__contacts-item">
-                    <a class="footer-top__contacts-link" href="mailto:support@sfood.com">
+                    <a class="footer-top__contacts-link link" href="mailto:support@sfood.com">
                       <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
                         <path
                           d="M16.9026 6.8512L12.4593 10.4642C11.6198 11.1302 10.4387 11.1302 9.59919 10.4642L5.11841 6.8512"
@@ -539,15 +571,14 @@
                 </li>
               </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-bottom__text">© 2022 Simple Food</p>
       </div>
 
     </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom__text">© 2022 Simple Food</p>
+    </div>
+
+
   </footer>
 
 
