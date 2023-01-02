@@ -20,6 +20,22 @@
 //   @include line-clamp(3);
 // }
 
+@mixin pseudo($display: block, $pos: absolute, $content: '', $bgr: no-repeat, $bgp: center center, $bgz: cover) {
+  content: $content;
+  display: $display;
+  position: $pos;
+  background-repeat: $bgr;
+  background-position: $bgp;
+  background-size: $bgz;
+}
+
+// Использование миксина без аргументов
+// .class::after {
+//   @include pseudo;
+//   width: 30px;
+//   height: 30px;
+// }
+
 $breakpoints: ("phone": 560px,
   "tablet": 768px,
   "tablet-2": 992px,
