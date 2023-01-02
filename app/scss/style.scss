@@ -1,8 +1,9 @@
 @import 'fonts';
-@import 'vars';
 @import 'reset';
+@import 'vars';
 @import 'libs';
 @import 'global';
+@import 'mixin';
 
 .header {
   padding-bottom: 60px;
@@ -20,7 +21,7 @@
   transition: box-shadow 0.5s, opacity 0.5s;
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px $bs;
   }
 
   &:hover {
@@ -50,6 +51,7 @@
 
   &__link {
     text-decoration: none;
+
   }
 
   &__link--active {
@@ -75,29 +77,27 @@
       position: absolute;
       top: 2px;
       right: 2px;
-      border: 1px solid $orange;
+      padding: 2px 4px;
       background-color: $orange;
       color: $bg;
       font-size: 10px;
       line-height: 1.2;
-      width: 14px;
       height: 14px;
       border-radius: 50%;
       display: block;
-      text-align: center;
-    }
+      }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      box-shadow: 0 0 0 2px $bs;
     }
 
     &:hover {
-      background-color: #FF7A50;
+      background-color: $orange-2;
       stroke: $bg;
 
       path {
-        fill: #FF7A50;
+        fill: $orange-2;
         stroke: $bg;
       }
 
@@ -107,7 +107,7 @@
 
       span {
         background-color: $bg;
-        color: #FF7A50;
+        color: $orange-2;
       }
     }
 
@@ -143,6 +143,7 @@
     line-height: 1.5;
     color: $dark;
     margin-bottom: 20px;
+    @include line-clamp(5);
   }
 
   &__btn {
@@ -154,12 +155,14 @@
 .categories {
   &__filter {
     display: flex;
-    align-items: center;
+    white-space: nowrap;
     margin-bottom: 45px;
   }
 
   &__btn {
-    margin-right: 20px;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
   }
 
   &__mixitup-control-active {
@@ -240,7 +243,6 @@
 
 .footer {
   padding-top: 60px;
-
 }
 
 .footer-top {
@@ -250,29 +252,8 @@
     margin-right: 70px;
   }
 
-  &__items {
-    display: flex;
-    justify-content: space-between;
-    max-height: 175px;
-    height: 100%;
-    width: 100%;
-    max-width: 571px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    column-count: 3;
-    gap: 10px 70px;
-    margin-right: 70px;
-  }
-
-  // &__item {
-  //   &:not(:last-child) {
-  //     margin-right: 30px;
-  //   }
-  // }
-
   &__logo {
     display: block;
-    margin-right: 0;
     margin-bottom: 30px;
   }
 
@@ -308,7 +289,6 @@
         color: $darkblue;
       }
     }
-
   }
 
   &__form-btn {
@@ -316,7 +296,7 @@
     font-weight: 500;
     font-size: 14px;
     height: 44px;
-    padding: 13px 38px 13px 38px;
+    padding: 13px 38px;
     max-width: 200px;
     width: 100%;
 
@@ -331,60 +311,74 @@
     }
   }
 
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    max-height: 175px;
+    height: 100%;
+    width: 100%;
+    max-width: 571px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-count: 3;
+    gap: 0 70px;
+    margin-right: 70px;
+  }
+
   &__item-link {
     font-size: 18px;
-    // margin-bottom: 20px;
     letter-spacing: 0.01em;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   &__link{
     text-decoration: none;
-    padding: 10px 0;
   }
-
-  &__contacts-item {
-    font-style: normal;
-    font-size: 16px;
-    line-height: 2;
+}
+.address{
+  &__item {
     margin-bottom: 15px;
   }
 
-  &__contacts-link {
+  &__link {
     display: flex;
     align-items: center;
     text-decoration: none;
-
-    span {
-      margin-left: 7px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 2;
+    svg{
+      padding-right: 7px;
     }
   }
-
-  &__social {
-    display: flex;
-    text-align: center;
-    margin: auto 0;
-  }
-
-  &__social-list {
-    border-radius: 50%;
-    border: 1px solid $default;
-    width: 39px;
-    height: 39px;
-    padding-top: 8px;
-    background-color: $silver-200;
-    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s;
-
+}
+  
+.social {
+  display: flex;
+  margin: auto 0;
+  &__list{
     &:not(:last-child) {
       margin-right: 13px;
     }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    background-color: $silver-200;
+    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s;
+
+    
 
     &:focus {
       background-color: #fff2ed;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      box-shadow: 0 0 0 2px $bs;
     }
 
     &:hover {
-      background-color: #ff7A50;
+      background-color: $orange-2;
 
       path {
         fill: $bg;
@@ -395,7 +389,7 @@
       background-color: #fff2ed;
 
       path {
-        fill: #ff7a50;
+        fill: $orange-2;
       }
     }
   }
