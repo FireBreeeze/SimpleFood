@@ -283,7 +283,7 @@
       left: 0;
       width: 34px;
       height: 34px;  
-      background-image: url(../images/icons-main/icon-timer.svg);
+      background-image: url('../images/icons-main/icon-timer.svg');
     }
   }
   &__item--delivery{
@@ -293,7 +293,7 @@
       left: 0;
       width: 34px;
       height: 34px;  
-      background-image: url(../images/icons-main/icon-delivery.svg);
+      background-image: url('../images/icons-main/icon-delivery.svg');
     }
   }
     &__item--restorant{
@@ -303,9 +303,88 @@
       left: 0;
       width: 34px;
       height: 34px;  
-      background-image: url(../images/icons-main/icon-restorant.svg);
+      background-image: url('../images/icons-main/icon-restorant.svg');
     }
   }
+}
+.restaurants{
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+.restaurant-card{
+  background-color: $bg;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 370px;
+  width: 100%;
+  transition: box-shadow 0.5s;
+  &:hover{
+    box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
+  }
+  &__img{
+    margin-bottom: 15px;
+    border-radius: 10px 10px 0 0;
+  }
+  &__title{
+    padding-left: 20px;
+    font-size: 24px;
+    color: $dark;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  &__inner{
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__time{
+    padding-left: 32px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $dark;
+    position: relative;
+    &::before{
+      @include pseudo;
+      top: 4px;
+      left: 0;
+      width: 22px;
+      height: 22px;  
+      background-image: url('../images/icons-main/icon-card-timer.svg');
+    }
+  }
+  &__btn{
+    border-radius: 20px;
+    width: 79px;
+    height: 33px;
+    position: relative;
+    &::before{
+      @include pseudo;
+      top: 9px;
+      right: 30px;
+      width: 14px;
+      height: 12px;  
+      background-image: url('../images/icons-main/icon-arrow-right.svg');
+      transition: transform 0.5s;
+    }
+    // &:hover{
+    //   &::before{
+    //     transform: translateX(20px);
+    //     svg{
+    //       path{
+    //         fill: #ff6838;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+.reviews__slider{
+  
 }
 
 .footer {
