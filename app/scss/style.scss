@@ -377,15 +377,121 @@
     //     svg{
     //       path{
     //         fill: #ff6838;
-    //       }
+    //       } не окрашивает svg
     //     }
     //   }
     // }
   }
 }
-.reviews__slider{
-  
+.reviews{
+  &__slider{
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  &__inner{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  &__img{
+    border-radius: 300px;
+    margin-right: 40px;
+  }
+  &__quote{
+    padding: 0 40px;
+    max-width: 650px;
+    max-height: 385px;
+    height: 100%;
+  }
+  &__block{
+    line-height: 1.5;
+    font-style: italic;
+    color: $dark;
+    margin-bottom: 30px;
+    position: relative;
+    &::before{
+      @include pseudo;
+      top: -4px;
+      left: -40px;
+      width: 24px;
+      height: 19px;  
+      background-image: url('../images/icons-main/icon-quote.svg');
+    }
+    &::after{
+      @include pseudo;
+      bottom: 0;
+      right: -40px;
+      width: 24px;
+      height: 19px;  
+      background-image: url('../images/icons-main/icon-quote.svg');
+      transform: rotateY(180deg);
+    }
+  }
+  &__cite{
+    color: $orange;
+    font-style: normal;
+    font-weight: 500;
+    span{
+      display: block;
+      padding-top: 15px;
+      color: $dark;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
 }
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  li{
+    display: block;
+    line-height: 0;
+    padding: 5px;
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+    button{      
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $gray;
+      font-size: 0;
+      &.slick-active {
+        background-color: $orange;
+        //не окрашиваются
+      }
+    }
+  }
+}
+
+.slick-arrow{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -5px;
+  background-image: url(../images/icons-main/icon-chevron.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 11px;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0.01);
+  border: 3px solid $gray;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  line-height: 0;
+  font-size: 0;
+  &.slick-prev{
+    right: 57%;
+    transform: rotateY(180deg);
+  }
+  &.slick-next{
+    right: 39%;
+  }  
+}
+
 
 .footer {
   padding-top: 60px;
