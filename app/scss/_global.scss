@@ -36,7 +36,6 @@ a {
 }
 
 .text {
-  text-align: center;
   line-height: 1.5;
   color: $dark;
   opacity: 0.9;
@@ -59,7 +58,7 @@ a {
   &:focus {
     color: $orange;
     background-color: rgba(255, 122, 80, 0.1);
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px $bs;
 
     path {
       fill: $orange;
@@ -68,8 +67,8 @@ a {
 
   &:hover {
     color: $orange;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: $bgc;
+    box-shadow: 0 5px 12px $bs-2, 0 0 0 2px $bs;
 
     path {
       fill: $orange;
@@ -95,13 +94,13 @@ a {
   transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px $bs;
   }
 
   &:hover {
     color: $orange;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: $bgc;
+    box-shadow: 0 0 0 2px $bs;
 
     path {
       fill: $orange;
@@ -109,7 +108,7 @@ a {
   }
 
   &:active {
-    box-shadow: inset 0 -5px 12px rgba(255, 104, 56, 0.2);
+    box-shadow: inset 0 -5px 12px $bs-2;
   }
 }
 
@@ -122,7 +121,7 @@ a {
 
   &:focus {
     border-color: $orange;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    box-shadow: 0 0 0 2px $bs;
     text-decoration: none;
 
     path {

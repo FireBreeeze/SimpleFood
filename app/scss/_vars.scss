@@ -4,8 +4,12 @@ $gray: #c2c2c2;
 $silver-200: #ececec;
 $silver-100: #f9faff;
 $orange: #ff6838;
+$orange-2: #ff7a50;
 $bg: #fff;
 $default: transparent;
+$bs: rgba(255, 104, 56, 0.7);
+$bs-2: rgba(255, 104, 56, 0.2);
+$bgc:  rgba(255, 255, 255, 0.1);
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
