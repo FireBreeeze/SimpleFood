@@ -62,6 +62,7 @@
   display: flex;
   
   &__btn {
+    display: block;
     width: 44px;
     height: 44px;
     margin: 0 6px;
@@ -84,27 +85,22 @@
       line-height: 1.2;
       height: 14px;
       border-radius: 50%;
-      display: block;
-      }
+    }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
       box-shadow: 0 0 0 2px $bs;
+      svg{
+        fill: rgba(255, 122, 80, 0.1);
+      }
     }
 
     &:hover {
       background-color: $orange-2;
-      stroke: $bg;
-
-      path {
-        fill: $orange-2;
+      svg{
         stroke: $bg;
+        fill: $orange-2;  
       }
-
-      ellipse {
-        stroke: $bg;
-      }
-
       span {
         background-color: $bg;
         color: $orange-2;
@@ -113,6 +109,9 @@
 
     &:active {
       background-color: #FFF2ED;
+      svg{
+        fill: #fff2ed;
+      }
     }
   }
 }
@@ -175,9 +174,9 @@
     line-height: 1.2;
     color: $bg;
     background-color: $orange;
-
-    path {
-      fill: #fff;
+    svg{
+      fill: $bg;
+      stroke: $bg;
     }
   }
 
@@ -335,6 +334,7 @@
   &__img{
     margin-bottom: 15px;
     border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
   &__title{
     padding-left: 20px;
@@ -369,28 +369,15 @@
     border-radius: 20px;
     width: 79px;
     height: 33px;
-    position: relative;
-    &::before{
-      @include pseudo;
-      top: 9px;
-      right: 30px;
-      width: 14px;
-      height: 12px;  
-      background-image: url('../images/icons-main/icon-arrow-right.svg');
-      transition: transform 0.5s;
+    transition: transform 0.5s;
+    &:hover{
+      svg{
+        transform: translateX(20px);
+      }
     }
-    // &:hover{
-    //   &::before{
-    //     transform: translateX(20px);
-    //     svg{
-    //       path{
-    //         fill: #ff6838;
-    //       } не окрашивает svg
-    //     }
-    //   }
-    // }
   }
 }
+
 .reviews{
   &__slider{
     max-width: 990px;
@@ -457,9 +444,8 @@
   li{
     display: block;
     line-height: 0;
-    padding: 5px;
     &:not(:last-child){
-      margin-right: 5px;
+      margin-right: 15px;
     }
     button{      
       width: 15px;
@@ -478,12 +464,8 @@
 .slick-arrow{
   content: "";
   position: absolute;
+  bottom: -9px;
   z-index: 1;
-  bottom: -5px;
-  background-image: url(../images/icons-main/icon-chevron.svg);
-  background-repeat: no-repeat;
-  background-size: 18px 11px;
-  background-position: center center;
   background-color: rgba(255, 255, 255, 0.01);
   border: 3px solid $gray;
   width: 34px;
@@ -491,13 +473,36 @@
   border-radius: 50%;
   line-height: 0;
   font-size: 0;
+  padding: 4px 10px;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
   &.slick-prev{
     right: 57%;
     transform: rotateY(180deg);
   }
   &.slick-next{
     right: 39%;
-  }  
+  }
+  &:focus{
+    background-color: $bgc;
+    border: 3px solid $gray;
+    box-shadow: 0 0 0 2px $bs;
+  }
+  &:hover{
+    background-color: #FFF2ED;
+    border: 3px solid #FFAE94;
+    svg{
+      fill: #FFAE94;
+      stroke: #FFAE94;
+    }
+  }
+  &:active{
+    background-color: #FFF2ED;
+    border: 3px solid #FFF2ED;
+    svg{
+      fill: $orange-2;
+      stroke: $orange-2;
+    }
+  }
 }
 
 .app{
@@ -668,9 +673,6 @@
     height: 39px;
     background-color: $silver-200;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s;
-
-    
-
     &:focus {
       background-color: #fff2ed;
       box-shadow: 0 0 0 2px $bs;
@@ -678,16 +680,14 @@
 
     &:hover {
       background-color: $orange-2;
-
-      path {
+      svg{
         fill: $bg;
       }
     }
 
     &:active {
       background-color: #fff2ed;
-
-      path {
+      svg{
         fill: $orange-2;
       }
     }
