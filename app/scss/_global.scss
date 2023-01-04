@@ -53,35 +53,38 @@ a {
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: 0.03em;
-  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, fill 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, fill 0.5s, stroke 0.5s, transform 0.5s;
 
   &:focus {
     color: $orange;
     background-color: rgba(255, 122, 80, 0.1);
     box-shadow: 0 0 0 2px $bs;
 
-    path {
+    svg {
       fill: $orange;
+      stroke: $orange;
     }
   }
 
   &:hover {
     color: $orange;
-    background-color: $bgc;
-    box-shadow: 0 5px 12px $bs-2, 0 0 0 2px $bs;
+    background-color: $bg;
+    box-shadow: 0 0 0 2px $bs;
 
-    path {
+    svg {
       fill: $orange;
+      stroke: $orange;
     }
   }
 
   &:active {
     color: $orange;
-    background-color: #ff7a501a;
+    background-color: #fff2ed;
     border-color: $default;
 
-    path {
+    svg {
       fill: $orange;
+      stroke: $orange;
     }
   }
 }
@@ -99,11 +102,16 @@ a {
 
   &:hover {
     color: $orange;
-    background-color: $bgc;
+    background-color: $bgo;
     box-shadow: 0 0 0 2px $bs;
 
-    path {
+    svg {
       fill: $orange;
+      stroke: $orange;
+
+      path {
+        fill: $orange;
+      }
     }
   }
 
@@ -123,15 +131,17 @@ a {
     border-color: $orange;
     box-shadow: 0 0 0 2px $bs;
     text-decoration: none;
-
-    path {
-      fill: $orange;
+    svg{
+      stroke: $orange;
     }
   }
 
   &:hover {
     color: $orange;
     text-decoration: none;
+    svg{
+      stroke: $orange;
+    }
   }
 
   &:active {
@@ -140,16 +150,82 @@ a {
   }
 }
 
-.icon-seach {
+.icon-seach,
+.icon-cart,
+.icon-categories {
+  background-color: transparent;
+  fill: $bg;
+  stroke: $darkblue;
+}
+
+.icon-seach,
+.icon-cart {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+}
+
+.icon-categories {
+  width: 44px;
+  height: 44px;
+  stroke: $darkblue;
+  fill: $darkblue;
+}
+
+.icon-arrow-right {
+  width: 14px;
+  height: 13px;
+  background-color: transparent;
+  fill: $bg;
+  stroke: $bg;
+}
+.icon-chevron{
+  width: 11px;
+  height: 18px;
+  background-color: transparent;
+  fill: $gray;
+  stroke: $gray;
+}
+.icon-telegram {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  fill: $bg;
+  stroke: $bg;
+}
+.icon-location {
+  width: 18px;
+  height: 20px;
+  background-color: $bg;
+  stroke: $darkblue;
+  fill: $bg;
+  stroke-width: 1.5;
+}
+.icon-call{
+  width: 22px;
+  height: 22px;
+  fill: $bg;
+  stroke: $darkblue;
+  stroke-width: 1.5;
+}
+.icon-message{
+  width: 22px;
+  height: 20px;
+  fill: $bg;
+  stroke: $darkblue;
+  stroke-width: 1.5;
+}
+.icon-facebook{ 
+  width: 10px;
+  height: 21px;
+}
+.icon-twitter{ 
+  width: 21px;
+  height: 17px;
+}
+.icon-instagram{ 
   width: 20px;
   height: 20px;
-  background-image: url('../images/sprite.svg#icon-search'); // иконка из спрайта
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: transparent;
-  fill: #fff;
-  stroke: #000;
 }
 
 .sr-only {

@@ -9,7 +9,8 @@ $bg: #fff;
 $default: transparent;
 $bs: rgba(255, 104, 56, 0.7);
 $bs-2: rgba(255, 104, 56, 0.2);
-$bgc:  rgba(255, 255, 255, 0.1);
+$bgc: rgba(255, 255, 255, 0.1);
+$bgo: rgba(255, 122, 80, 0.1);
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
