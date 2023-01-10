@@ -2,8 +2,8 @@
 @import 'reset';
 @import 'vars';
 @import 'libs';
-@import 'global';
 @import 'mixin';
+@import 'global';
 
 .header {
   padding-bottom: 60px;
@@ -11,14 +11,17 @@
   &__top {
     padding: 50px 3px 45px 5px;
   }
-  &__logo{
+
+  &__logo {
     margin-right: auto;
   }
 }
 
 .logo {
   border-radius: 5px;
+  height: 39px;
   transition: box-shadow 0.5s, opacity 0.5s;
+  object-fit: cover;
 
   &:focus {
     box-shadow: 0 0 0 2px $bs;
@@ -35,34 +38,41 @@
 
 .menu {
   display: flex;
-  
+
   &__inner {
     display: flex;
   }
 }
-.menu-list{
+
+.menu-list {
   display: flex;
   font-size: 18px;
   line-height: 1.2;
+  margin-right: 45px;
+
   &__item {
-    margin-right: 45px;
     padding: 10px 0;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 
   &__link {
     text-decoration: none;
-
-  }
-
-  &__link--active {
-    color: $orange;
+    &--active{
+      color: $orange;
+    }
   }
 }
-.menu-btn{
+
+.menu-btn {
   display: flex;
-  
+
   &__btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     margin: 0 6px;
@@ -70,37 +80,31 @@
     position: relative;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
 
+    svg {
+      fill: none;
+    }
+
     &:last-child {
       margin-right: 0;
     }
 
-    span {
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      padding: 2px 4px;
-      background-color: $orange;
-      color: $bg;
-      font-size: 10px;
-      line-height: 1.2;
-      height: 14px;
-      border-radius: 50%;
-    }
-
     &:focus {
-      background-color: rgba(255, 122, 80, 0.1);
+      background-color: $bgo;
       box-shadow: 0 0 0 2px $bs;
-      svg{
-        fill: rgba(255, 122, 80, 0.1);
+
+      svg {
+        fill: $bgo;
       }
     }
 
     &:hover {
       background-color: $orange-2;
-      svg{
+
+      svg {
         stroke: $bg;
-        fill: $orange-2;  
+        fill: $orange-2;
       }
+
       span {
         background-color: $bg;
         color: $orange-2;
@@ -109,16 +113,32 @@
 
     &:active {
       background-color: #FFF2ED;
-      svg{
+
+      svg {
         fill: #fff2ed;
       }
     }
+  }
+
+  &__btn-prefix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 2px 4px;
+    background-color: $orange;
+    color: $bg;
+    font-size: 10px;
+    line-height: 1.2;
+    height: 14px;
+    border-radius: 50%;
   }
 }
 
 .header-content {
   &__inner {
-    height: 660px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,7 +153,8 @@
     font-size: 66px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    span{
+
+    span {
       color: $orange;
     }
   }
@@ -153,39 +174,43 @@
 
 .categories {
   padding-top: 66px;
-  &__title{
+
+  &__title {
     margin-bottom: 61px;
   }
+
   &__filter {
     display: flex;
     white-space: nowrap;
     margin-bottom: 45px;
+    overflow-x: auto;
   }
 
   &__btn {
-    padding: 12px 30px;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 21px;
     }
   }
 
-  &__mixitup-control-active {
-    font-size: 20px;
-    line-height: 1.2;
-    color: $bg;
-    background-color: $orange;
-    svg{
-      fill: $bg;
-      stroke: $bg;
-    }
-  }
-
   &__btn-link {
+    padding: 12px 30px;
     display: flex;
     align-items: center;
 
     svg {
       margin-right: 10px;
+    }
+
+    &.mixitup-control-active {
+      font-size: 20px;
+      line-height: 1.2;
+      color: $bg;
+      background-color: $orange;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
     }
   }
 
@@ -195,13 +220,16 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
   }
-  &__link{
-    display: block;
-    text-align: center;
+
+  &__link {
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-.product-card{
+.product-card {
   padding: 20px 15px 27px;
   max-width: 210px;
   width: 100%;
@@ -211,32 +239,40 @@
   border-radius: 5px;
   align-items: center;
   text-align: center;
-  &__img{
+
+  &__img {
     margin: 0 auto 10px;
     width: 140px;
     height: 140px;
     object-fit: cover;
   }
-  &__title{
+
+  &__inner {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 66px;
+    height: 100%;
+  }
+
+  &__title {
     font-size: 15px;
     line-height: 1.2;
     font-weight: 400;
     color: $dark;
-    max-height: 66px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include line-clamp(2);
   }
-  &__price{
+
+  &__price {
     display: block;
     color: $darkblue;
     font-weight: 500;
     line-height: 1.4;
     margin-top: auto;
   }
-  &__btn{
+
+  &__btn {
     font-size: 14px;
   }
 
@@ -245,189 +281,226 @@
   }
 }
 
-.features{
-  &__inner{
+.features {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto 70px;
   }
-  &__content{
+
+  &__content {
     max-width: 470px;
     width: 100%;
-    
+
   }
-  &__title{
+
+  &__title {
     text-align: start;
     margin-bottom: 30px;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 30px;
     @include line-clamp(3);
   }
-  &__items{
+
+  &__items {
     margin-bottom: 30px;
   }
-  &__item{
+
+  &__item {
     font-size: 24px;
     line-height: 1.5;
     position: relative;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
-    span{
+
+    span {
       display: block;
       padding-left: 64px;
     }
-  }
-  &__item--time{
     &::before{
       @include pseudo;
       top: 0;
       left: 0;
       width: 34px;
-      height: 34px;  
-      background-image: url('../images/icons-main/icon-timer.svg');
+      height: 34px;
+      
+    }
+    &--time{
+      &::before{
+        background-image: url('../images/icons-main/icon-timer.svg');
+      }
+    }
+    &--delivery{
+      &::before{
+        background-image: url('../images/icons-main/icon-delivery.svg');
+      }
+    }
+    &--restorant{
+      &::before{
+        background-image: url('../images/icons-main/icon-restorant.svg');
+      }
     }
   }
-  &__item--delivery{
-    &::before{
-      @include pseudo;
-      top: 0;
-      left: 0;
-      width: 34px;
-      height: 34px;  
-      background-image: url('../images/icons-main/icon-delivery.svg');
-    }
-  }
-    &__item--restorant{
-    &::before{
-      @include pseudo;
-      top: 0;
-      left: 0;
-      width: 34px;
-      height: 34px;  
-      background-image: url('../images/icons-main/icon-restorant.svg');
-    }
-  }
-  &__btn{
+
+  &__btn {
     padding: 8px 30px;
   }
 }
-.restaurants{
-  &__list{
+
+.restaurants {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
   }
 }
-.restaurant-card{
+
+.restaurant-card {
   background-color: $bg;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px $bs-4;
   border-radius: 10px;
   max-width: 370px;
   width: 100%;
+  height: 100%;
   transition: box-shadow 0.5s;
-  &:hover{
-    box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
+
+  &:hover {
+    box-shadow: 0 3px 15px $bs-3;
   }
-  &__img{
-    margin-bottom: 15px;
+
+  &__img {
     border-radius: 10px 10px 0 0;
     object-fit: cover;
   }
-  &__title{
-    padding-left: 20px;
+
+  &__wrapper {
+    padding: 15px 20px 20px;
+  }
+
+  &__title {
     font-size: 24px;
     color: $dark;
     margin-bottom: 20px;
     font-weight: 400;
+    @include line-clamp(1);
   }
-  &__inner{
-    padding: 0 20px 20px;
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__time{
-    padding-left: 32px;
+
+  &__time-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
     font-weight: 300;
     font-size: 18px;
     line-height: 1.7;
     color: $dark;
+  }
+
+  &__time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 27px;
     position: relative;
-    &::before{
+
+    &::before {
       @include pseudo;
-      top: 4px;
+      top: 2px;
       left: 0;
       width: 22px;
-      height: 22px;  
+      height: 22px;
       background-image: url('../images/icons-main/icon-card-timer.svg');
     }
   }
-  &__btn{
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
     width: 79px;
     height: 33px;
-    transition: transform 0.5s;
-    &:hover{
-      svg{
+
+    svg {
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      svg {
         transform: translateX(20px);
       }
     }
   }
 }
 
-.reviews{
-  &__slider{
+.reviews {
+  &__slider {
     max-width: 990px;
     margin: 0 auto;
   }
-  &__inner{
-    display: flex !important;
+
+  &__inner {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 48px;
   }
-  &__img{
+
+  &__img {
     border-radius: 300px;
     margin-right: 40px;
+    object-fit: cover;
   }
-  &__quote{
+
+  &__quote {
     padding: 0 40px;
     max-width: 650px;
     max-height: 385px;
     height: 100%;
   }
-  &__block{
+
+  &__block {
     line-height: 1.5;
     font-style: italic;
     color: $dark;
     margin-bottom: 30px;
     position: relative;
-    &::before{
-      @include pseudo;
-      top: -4px;
-      left: -40px;
-      width: 24px;
-      height: 19px;  
-      background-image: url('../images/icons-main/icon-quote.svg');
-    }
+    &::before,
     &::after{
       @include pseudo;
-      bottom: 0;
-      right: -40px;
+      left: -40px;
       width: 24px;
-      height: 19px;  
+      height: 19px;
+    }
+    &::before {
+      top: -4px;
+      background-image: url('../images/icons-main/icon-quote.svg');
+    }
+
+    &::after {
+      bottom: 0;
       background-image: url('../images/icons-main/icon-quote.svg');
       transform: rotateY(180deg);
     }
   }
-  &__cite{
+
+  &__cite {
     color: $orange;
     font-style: normal;
     font-weight: 500;
-    span{
+
+    span {
       display: block;
       padding-top: 15px;
       color: $dark;
@@ -435,111 +508,147 @@
       font-size: 14px;
     }
   }
-}
-.slick-dots{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  li{
-    display: block;
-    line-height: 0;
-    &:not(:last-child){
-      margin-right: 15px;
-    }
-    button{      
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: $gray;
-      font-size: 0;
-      &.slick-active {
-        background-color: $orange;
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+
+    li {
+      display: block;
+      line-height: 0;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $gray;
+        font-size: 0;
+
+        &.slick-active {
+          background-color: $orange;
         //не окрашиваются
+        }
       }
     }
   }
-}
 
-.slick-arrow{
-  content: "";
-  position: absolute;
-  bottom: -9px;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.01);
-  border: 3px solid $gray;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  line-height: 0;
-  font-size: 0;
-  padding: 4px 10px;
-  transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-  &.slick-prev{
-    right: 57%;
-    transform: rotateY(180deg);
+  .slick-active {
+    &.slick-dots{
+      background-color: $orange;
+    }
+        //не окрашиваются
   }
-  &.slick-next{
-    right: 39%;
-  }
-  &:focus{
-    background-color: $bgc;
+
+  .reviews-arrow {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    z-index: 1;
+    background-color: $bgc-1;
     border: 3px solid $gray;
-    box-shadow: 0 0 0 2px $bs;
-  }
-  &:hover{
-    background-color: #FFF2ED;
-    border: 3px solid #FFAE94;
-    svg{
-      fill: #FFAE94;
-      stroke: #FFAE94;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    line-height: 0;
+    font-size: 0;
+    padding: 4px 10px;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+    &__prev {
+      right: 57%;
+      transform: rotateY(180deg);
+    }
+
+    &__next {
+      right: 39%;
+    }
+
+    &:focus {
+      background-color: $bgc;
+      border: 3px solid $gray;
+      box-shadow: 0 0 0 2px $bs;
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 3px solid #FFAE94;
+
+      svg {
+        fill: #FFAE94;
+        stroke: #FFAE94;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border: 3px solid #FFF2ED;
+
+      svg {
+        fill: $orange-2;
+        stroke: $orange-2;
+      }
     }
   }
-  &:active{
-    background-color: #FFF2ED;
-    border: 3px solid #FFF2ED;
-    svg{
+
+
+  .slick-disabled {
+    border: 3px solid $orange-2;
+
+    svg {
       fill: $orange-2;
       stroke: $orange-2;
     }
   }
 }
 
-.app{
+.app {
   padding-top: 75px;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__content{
+
+  &__content {
     max-width: 540px;
     width: 100%;
     margin-right: 60px;
   }
-  &__title{
+
+  &__title {
     text-align: start;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 30px;
     @include line-clamp(4);
   }
-  &__link{
+
+  &__link {
     display: inline-block;
     line-height: 2;
     width: 100%;
-    color: $default;
+    color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  &__link-app{
-    max-width: 120px;
+
+  &__link--app {
+    width: 120px;
     background-image: url('../images/icons-main/icon-app-store.svg');
     background-size: 120px 40px;
     margin-right: 30px;
   }
-  &__link-google{
-    max-width: 135px;
+
+  &__link--google {
+    width: 135px;
     background-image: url('../images/icons-main/icon-google-store.svg');
     background-size: 135px 40px;
   }
@@ -552,7 +661,8 @@
 .footer-top {
   padding-bottom: 60px;
   display: flex;
-  &__form-inner{
+
+  &__form-inner {
     margin-right: 70px;
   }
 
@@ -579,13 +689,13 @@
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
 
     &::placeholder {
-      color: #c2c2c2;
+      color: $gray;
       opacity: 0.9;
     }
 
     &:focus {
       box-shadow: 0 0 0 2px $orange;
-      border: 1px solid $default;
+      border: 1px solid transparent;
     }
 
     &:hover {
@@ -633,12 +743,15 @@
     font-size: 18px;
     letter-spacing: 0.01em;
     margin-bottom: 15px;
+    color: $dark;
   }
-  &__link{
+
+  &__link {
     text-decoration: none;
   }
 }
-.address{
+
+.address {
   &__item {
     margin-bottom: 15px;
   }
@@ -650,20 +763,24 @@
     font-style: normal;
     font-size: 16px;
     line-height: 2;
-    svg{
+    color: $dark;
+
+    svg {
       padding-right: 7px;
     }
   }
 }
-  
+
 .social {
   display: flex;
   margin: auto 0;
-  &__list{
+
+  &__list {
     &:not(:last-child) {
       margin-right: 13px;
     }
   }
+
   &__link {
     display: flex;
     justify-content: center;
@@ -673,6 +790,7 @@
     height: 39px;
     background-color: $silver-200;
     transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s;
+
     &:focus {
       background-color: #fff2ed;
       box-shadow: 0 0 0 2px $bs;
@@ -680,14 +798,16 @@
 
     &:hover {
       background-color: $orange-2;
-      svg{
+
+      svg {
         fill: $bg;
       }
     }
 
     &:active {
       background-color: #fff2ed;
-      svg{
+
+      svg {
         fill: $orange-2;
       }
     }
@@ -697,7 +817,7 @@
 .footer-bottom {
   padding: 23px 0 30px;
   text-align: center;
-  border-top: 1px solid $gray;
+  border-top: 1px solid rgb(194, 194, 194, 0.2);
 
   &__text {
     font-size: 14px;

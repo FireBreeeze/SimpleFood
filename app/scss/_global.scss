@@ -24,10 +24,6 @@ body {
   margin: 0 auto;
 }
 
-a {
-  color: $dark;
-}
-
 .title {
   text-align: center;
   font-weight: 500;
@@ -80,7 +76,7 @@ a {
   &:active {
     color: $orange;
     background-color: #fff2ed;
-    border-color: $default;
+    border-color: transparent;
 
     svg {
       fill: $orange;
@@ -131,7 +127,8 @@ a {
     border-color: $orange;
     box-shadow: 0 0 0 2px $bs;
     text-decoration: none;
-    svg{
+
+    svg {
       stroke: $orange;
     }
   }
@@ -139,7 +136,8 @@ a {
   &:hover {
     color: $orange;
     text-decoration: none;
-    svg{
+
+    svg {
       stroke: $orange;
     }
   }
@@ -179,13 +177,15 @@ a {
   fill: $bg;
   stroke: $bg;
 }
-.icon-chevron{
+
+.icon-chevron {
   width: 11px;
   height: 18px;
   background-color: transparent;
   fill: $gray;
   stroke: $gray;
 }
+
 .icon-telegram {
   width: 15px;
   height: 15px;
@@ -193,6 +193,7 @@ a {
   fill: $bg;
   stroke: $bg;
 }
+
 .icon-location {
   width: 18px;
   height: 20px;
@@ -201,29 +202,34 @@ a {
   fill: $bg;
   stroke-width: 1.5;
 }
-.icon-call{
+
+.icon-call {
   width: 22px;
   height: 22px;
   fill: $bg;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
-.icon-message{
+
+.icon-message {
   width: 22px;
   height: 20px;
   fill: $bg;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
-.icon-facebook{ 
+
+.icon-facebook {
   width: 10px;
   height: 21px;
 }
-.icon-twitter{ 
+
+.icon-twitter {
   width: 21px;
   height: 17px;
 }
-.icon-instagram{ 
+
+.icon-instagram {
   width: 20px;
   height: 20px;
 }
@@ -240,3 +246,4 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
