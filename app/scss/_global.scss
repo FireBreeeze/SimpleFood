@@ -29,6 +29,15 @@ body {
   font-weight: 500;
   font-size: 36px;
   margin-bottom: 45px;
+
+  @include mq('tablet-2') {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  @include mq('tablet') {
+    font-size: 24px;
+  }
 }
 
 .text {
@@ -39,6 +48,11 @@ body {
 
 .section {
   padding: 60px 0;
+
+  @include mq('tablet-2') {
+    padding: 25px 0;
+    margin-bottom: 40px;
+  }
 }
 
 .btn {
@@ -82,6 +96,10 @@ body {
       fill: $orange;
       stroke: $orange;
     }
+  }
+
+  @include mq('phone') {
+    font-size: 14px;
   }
 }
 
@@ -146,6 +164,10 @@ body {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     text-decoration: none;
   }
+
+  @include mq('phone') {
+    font-size: 16px;
+  }
 }
 
 .icon-seach,
@@ -168,6 +190,11 @@ body {
   height: 44px;
   stroke: $darkblue;
   fill: $darkblue;
+
+  @include mq('tablet') {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .icon-arrow-right {
@@ -246,4 +273,3 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
