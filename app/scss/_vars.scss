@@ -14,10 +14,10 @@ $bgc: rgba(255, 255, 255, 0.1);
 $bgc-1: rgba(255, 255, 255, 0.01);
 $bgo: rgba(255, 122, 80, 0.1);
 
-$burgersWidth: 30px; //ширина линий - 40px
-$burgersHeight: 10px; //высота линий - 25px
-$burgersLineHeight: 2px; //расстояние между ними - 2px
-$burgersColor: $darkblue; //цвет - белый
+$burgerWidth: 30px; //ширина линий - 40px
+$burgerHeight: 10px; //высота линий - 25px
+$burgerLineHeight: 2px; //расстояние между ними - 2px
+$burgerColor: $darkblue; //цвет - белый
 
 
 $breakpoints: (
@@ -27,12 +27,6 @@ $breakpoints: (
   "tablet": 768px,
   "tablet-2": 992px,
   "desktop": 1230px);
-
-
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});

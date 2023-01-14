@@ -16,11 +16,9 @@ $(function(){
         }
       }
     ],
-
-
     prevArrow: '<div class="reviews-arrow reviews-arrow__prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
     nextArrow: '<div class="reviews-arrow reviews-arrow__next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
-  });
+  }),
 
 
   $('.restaurants__list').slick({
@@ -31,15 +29,7 @@ $(function(){
     autoplaySpeed: 3000,
     infinite: true,
     cssEase: 'linear',
-    centerMode: true,
-    responsive: [
-      {
-          breakpoint: 576,
-          settings: {
-
-          }
-      }
-    ]
+    centerMode: true
   });
 
   $(window).on('load resize', function () {
@@ -59,59 +49,26 @@ $(function(){
   }
 });
 
-  
+});
 
+document.addEventListener('DOMContentLoaded', () => {
 
-  // document.addEventListener('DOMContentLoaded', () => {
-	// //DOMContentLoaded означает, когда наш документ будет готов к работе, тогда начнут работать наши скрипты
-  
-	// //Mobile Menu
-  // const menu__burgers = document.querySelector('.menu__burgers'); //находим наш бургер по селектору класса
-  
-  // menu__burgers.addEventListener('click', () => {
-	// //Добавляем событие "клик" на бургер
+  //Mobile Menu
+  const burger = document.querySelector('.burger'); //наша кнопка
+  const mobileMenu = document.querySelector('.menu'); //мобильное меню
+  const bodyLock = document.querySelector('body'); //ищем как селектор ТЕГА
 
-  // menu__burgers.classList.toggle('menu__burgers--active'); //при клике на бургер у нас будет либо добавлятся класс, либо удаляется.
-	// 	//ВАЖНО! Мы уже работаем с данным классом, поэтому тут "." не ставим, иначе в атрибут class значение добавится с "." и работать не будет.
-  // });
-
-  // //Клик вне таргета
-  // document.addEventListener('click', function (e) {
-  //   if (e.target !== burger && e.target !== mobileMenu) {
-  //     burger.classList.remove('burger--active');
-  //     mobileMenu.classList.remove('menu--active');
-  //     bodyLock.classList.remove('lock');
-  //   }
-  // });
-// };
-
-//   $('.reviews__slider').slick({
-//     dots: true,
-//     arrow: true,
-//     fade: false,
-//     // autoplay: true,
-//     autoplaySpeed: 3000,
-//     infinite: false,
-
-//     prevArrow: '<div class="reviews-arrow reviews-arrow__prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
-//     nextArrow: '<div class="reviews-arrow reviews-arrow__next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
-//   });
-
-//   $('div').on('click', function() {
-//   $('slider').slick('slickNext');
-// });
-
-//  $('.restaurants__slider').slick({
-//     dots: true,
-//     arrow: true,
-//     fade: true,
-//     // autoplay: true,
-//     autoplaySpeed: 3000,
-//     infinite: false,
-//   });
-
-
-
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('menu--active'); //когда меню открыто
+    if (mobileMenu.classList.contains('menu--active'))  { //Проверяем, есть ли у меню активный класс
+      burger.classList.add('burger--active'); //Когда открыто, иконка становится крестиком
+      bodyLock.classList.add('lock'); //Блокируем скролл при открытом меню
+    }
+    else { //Когда нету активного класса у меню
+      burger.classList.remove('burger--active'); //Возвращает в исходное состояние
+      bodyLock.classList.remove('lock'); //Разрешаем скроллить
+    }
+  });
 });
 
 var mixer = mixitup('.categories__content');

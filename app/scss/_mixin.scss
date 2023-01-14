@@ -58,7 +58,7 @@
 //   }
 // }
 
-@mixin burgers {
+@mixin burger {
   // width: $burgerWidth; //указываем ширину линий
   // height: $burgerHeight; //указываем высоту линий
   position: relative;
@@ -67,7 +67,7 @@
   &__line {
     position: absolute;
     left: 7px;
-    top: 15px;
+    top: 20px;
     width: 30px;
     display: block;
     height: 2px;
@@ -88,15 +88,15 @@
   }
 
   &::before {
-    top: 5px;
+    top: 10px;
   }
 
   &::after {
-    top: 25px;
+    top: 30px;
   }
 
   &--active {
-    .burgers__line {
+    .burger__line {
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
