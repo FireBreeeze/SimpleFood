@@ -36,16 +36,11 @@
 //   height: 30px;
 // }
 
-$breakpoints: ("phone": 560px,
-  "tablet": 768px,
-  "tablet-2": 992px,
-  "desktop": 1230px);
-
-@mixin mq($width, $type: min) {
+@mixin mq($width, $type: max) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
 
-    @if $type==max {
+    @if $type==min {
       $width: $width - 1px;
     }
 
@@ -58,8 +53,64 @@ $breakpoints: ("phone": 560px,
 // Использование миксина 
 // .header {
 //   padding: 20px;
-
 //   @include mq('tablet') {
 //     padding: 15px;
 //   }
 // }
+
+@mixin burger {
+  // width: $burgerWidth; //указываем ширину линий
+  // height: $burgerHeight; //указываем высоту линий
+  position: relative;
+  color: $darkblue; //указываем цвет линий
+  
+  &__line {
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    width: 30px;
+    display: block;
+    height: 2px;
+    border: 1px solid $darkblue;
+    background-color: $bg;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    width: 30px;
+    height: 2px;
+    background-color: $darkblue;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    top: 30px;
+  }
+
+  &--active {
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+  }
+}

@@ -14,6 +14,21 @@ body {
   flex-direction: column;
 }
 
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .main {
   flex-grow: 1;
 }
@@ -24,15 +39,20 @@ body {
   margin: 0 auto;
 }
 
-a {
-  color: $dark;
-}
-
 .title {
   text-align: center;
   font-weight: 500;
   font-size: 36px;
   margin-bottom: 45px;
+
+  @include mq('tablet-2') {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  @include mq('tablet') {
+    font-size: 24px;
+  }
 }
 
 .text {
@@ -43,6 +63,11 @@ a {
 
 .section {
   padding: 60px 0;
+
+  @include mq('tablet-2') {
+    padding: 25px 0;
+    margin-bottom: 40px;
+  }
 }
 
 .btn {
@@ -80,12 +105,16 @@ a {
   &:active {
     color: $orange;
     background-color: #fff2ed;
-    border-color: $default;
+    border-color: transparent;
 
     svg {
       fill: $orange;
       stroke: $orange;
     }
+  }
+
+  @include mq('phone') {
+    font-size: 14px;
   }
 }
 
@@ -131,7 +160,8 @@ a {
     border-color: $orange;
     box-shadow: 0 0 0 2px $bs;
     text-decoration: none;
-    svg{
+
+    svg {
       stroke: $orange;
     }
   }
@@ -139,7 +169,8 @@ a {
   &:hover {
     color: $orange;
     text-decoration: none;
-    svg{
+
+    svg {
       stroke: $orange;
     }
   }
@@ -147,6 +178,10 @@ a {
   &:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     text-decoration: none;
+  }
+
+  @include mq('phone') {
+    font-size: 16px;
   }
 }
 
@@ -170,6 +205,11 @@ a {
   height: 44px;
   stroke: $darkblue;
   fill: $darkblue;
+
+  @include mq('tablet') {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .icon-arrow-right {
@@ -179,13 +219,15 @@ a {
   fill: $bg;
   stroke: $bg;
 }
-.icon-chevron{
+
+.icon-chevron {
   width: 11px;
   height: 18px;
   background-color: transparent;
   fill: $gray;
   stroke: $gray;
 }
+
 .icon-telegram {
   width: 15px;
   height: 15px;
@@ -193,6 +235,7 @@ a {
   fill: $bg;
   stroke: $bg;
 }
+
 .icon-location {
   width: 18px;
   height: 20px;
@@ -201,29 +244,34 @@ a {
   fill: $bg;
   stroke-width: 1.5;
 }
-.icon-call{
+
+.icon-call {
   width: 22px;
   height: 22px;
   fill: $bg;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
-.icon-message{
+
+.icon-message {
   width: 22px;
   height: 20px;
   fill: $bg;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
-.icon-facebook{ 
+
+.icon-facebook {
   width: 10px;
   height: 21px;
 }
-.icon-twitter{ 
+
+.icon-twitter {
   width: 21px;
   height: 17px;
 }
-.icon-instagram{ 
+
+.icon-instagram {
   width: 20px;
   height: 20px;
 }

@@ -6,11 +6,27 @@ $silver-100: #f9faff;
 $orange: #ff6838;
 $orange-2: #ff7a50;
 $bg: #fff;
-$default: transparent;
 $bs: rgba(255, 104, 56, 0.7);
 $bs-2: rgba(255, 104, 56, 0.2);
+$bs-3: rgba(255, 104, 56, 0.5);
+$bs-4: rgba(0, 0, 0, 0.1);
 $bgc: rgba(255, 255, 255, 0.1);
+$bgc-1: rgba(255, 255, 255, 0.01);
 $bgo: rgba(255, 122, 80, 0.1);
+
+$burgerWidth: 30px; //ширина линий - 40px
+$burgerHeight: 10px; //высота линий - 25px
+$burgerLineHeight: 2px; //расстояние между ними - 2px
+$burgerColor: $darkblue; //цвет - белый
+
+
+$breakpoints: (
+  "phone-2": 320px,  
+  "phone-1": 375px,
+  "phone": 576px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px);
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
