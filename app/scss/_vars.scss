@@ -20,13 +20,22 @@ $burgerLineHeight: 2px; //расстояние между ними - 2px
 $burgerColor: $darkblue; //цвет - белый
 
 
-$breakpoints: (
-  "phone-2": 320px,  
+$breakpoints: ("phone-2": 320px,
   "phone-1": 375px,
   "phone": 576px,
+  "tab-sl": 620px,
   "tablet": 768px,
   "tablet-2": 992px,
   "desktop": 1230px);
+
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
