@@ -136,7 +136,7 @@ body {
 
     svg {
       fill: $orange;
-      stroke: $orange;
+      // stroke: $orange;
 
       path {
         fill: $orange;
@@ -161,9 +161,9 @@ body {
     box-shadow: 0 0 0 2px $bs;
     text-decoration: none;
 
-    svg {
-      stroke: $orange;
-    }
+    // svg {
+    //   stroke: $orange;
+    // }
   }
 
   &:hover {
@@ -203,7 +203,7 @@ body {
 .icon-categories {
   width: 44px;
   height: 44px;
-  stroke: $darkblue;
+  stroke: none;
   fill: $darkblue;
 
   @include mq('tablet') {
@@ -224,7 +224,6 @@ body {
   width: 11px;
   height: 18px;
   background-color: transparent;
-  fill: $gray;
   stroke: $gray;
 }
 
@@ -239,16 +238,15 @@ body {
 .icon-location {
   width: 18px;
   height: 20px;
-  background-color: $bg;
   stroke: $darkblue;
-  fill: $bg;
+  fill: none;
   stroke-width: 1.5;
 }
 
 .icon-call {
   width: 22px;
   height: 22px;
-  fill: $bg;
+  fill: none;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
@@ -256,7 +254,7 @@ body {
 .icon-message {
   width: 22px;
   height: 20px;
-  fill: $bg;
+  fill: none;
   stroke: $darkblue;
   stroke-width: 1.5;
 }
@@ -287,4 +285,104 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.top {
+  &__wrapper {
+    background-color: $bgo;
+    height: 65px;
+  }
+
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 24px 17px 24px 0;
+    color: #505050;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 10px;
+        top: 27px;
+        right: 6px;
+        background-image: url('../images/icons/icon-chevron.svg');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    padding: 0 6px;
+  }
+
+  &__decor {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgp;
+    border-radius: 3px;
+
+    svg {
+      stroke: $gray;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: $darkblue;
+    letter-spacing: 0.03em;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $orange;
+    }
+
+    &:hover {
+      color: $bg;
+      background-color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+    }
+    &--active {
+    border: 1px solid $darkblue;
+  }
+  }
+  &__prev {
+    transform: rotateY(180deg);
+  }
+
+  &__arrows--active {
+    svg {
+      stroke: $darkblue;
+    }
+  }
 }
