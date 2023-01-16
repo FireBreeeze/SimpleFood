@@ -224,7 +224,6 @@ body {
   width: 11px;
   height: 18px;
   background-color: transparent;
-  fill: $gray;
   stroke: $gray;
 }
 
@@ -308,19 +307,82 @@ body {
     line-height: 1.2;
     letter-spacing: 0.03em;
     position: relative;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       &::after {
-      position: absolute;
-      content: "";
-      width: 6px;
-      height: 10px;
-      top: 27px;
-      right: 6px;
-      background-image: url('../images/icons/icon-chevron.svg');
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: contain;
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 10px;
+        top: 27px;
+        right: 6px;
+        background-image: url('../images/icons/icon-chevron.svg');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
       }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    padding: 0 6px;
+  }
+
+  &__decor {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgp;
+    border-radius: 3px;
+
+    svg {
+      stroke: $gray;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: $darkblue;
+    letter-spacing: 0.03em;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $orange;
+    }
+
+    &:hover {
+      color: $bg;
+      background-color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+    }
+    &--active {
+    border: 1px solid $darkblue;
+  }
+  }
+  &__prev {
+    transform: rotateY(180deg);
+  }
+
+  &__arrows--active {
+    svg {
+      stroke: $darkblue;
     }
   }
 }

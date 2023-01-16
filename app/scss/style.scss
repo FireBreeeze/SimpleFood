@@ -1476,8 +1476,34 @@
 }
 
 .catalog {
+  &__app {
+    padding-top: 60px;
+  }
+
+  &__restaurants-title {
+    text-align: start;
+    margin-bottom: 60px;
+  }
+
+  &__restaurants-link {
+    font-size: 24px;
+    color: $dark;
+    @include line-clamp(2);
+  }
+
+  &__restaurants-wrapper {
+    padding: 15px 20px;
+  }
+
   &__inner {
     display: flex;
+  }
+
+  &__list {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
 
   .select-style {
@@ -1532,23 +1558,22 @@
   .jq-selectbox__trigger-arrow {
     position: absolute;
     content: "";
-    top: 16px;
+    top: 17px;
     right: 15px;
     width: 12px;
     height: 10px;
     border: none;
     // background-image: url('../images/sprite.svg#icon-chevron.svg');
-    background-image: url('../images/icons/icon-chevron.svg');
+    background-image: url(../images/sprite.svg#icon-chevron);
     transform: rotate(90deg);
     background-repeat: no-repeat;
     background-position: center;
-    fill: $silver-200;
-    // path{
-    //   fill: $silver-200;
-    //   stroke: $silver-200;
-    // }
+    // stroke: red;
+    // fill: red;
+
     // svg {
-    //   fill: $silver-200;
+    //   stroke: red;
+    //   fill: red;
     // }
   }
 
@@ -1731,6 +1756,7 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
+
     &:not(:last-child) {
       margin-right: 21px;
     }
@@ -1748,6 +1774,9 @@
     border: 1px solid $bgp;
     border-radius: 3px;
     margin: 0 3px;
+    &:focus{
+      border: 1px solid $orange;
+    }
   }
 
   .irs--flat {
@@ -1788,4 +1817,8 @@
   .irs--flat .irs-single {
     display: none;
   }
+}
+
+.app-catalog {
+  padding-top: 60px;
 }
