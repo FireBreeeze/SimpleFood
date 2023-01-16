@@ -14,11 +14,12 @@ $(function(){
       $('.filter-price__to').text(data.to);
     },   
   });
-  
+
+   
   // $('.mobil-burger').add('burger--active');
   // $('.mobil-burger--active').remove('burger');
 
-  $('input, select').styler();
+  $('.select-style').styler();
 
   $('.reviews__slider').slick({
     dots: true,

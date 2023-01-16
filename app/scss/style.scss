@@ -1478,12 +1478,25 @@
 .catalog {
   &__inner {
     display: flex;
+  }
 
+  .select-style {
+    &:focus-visible {
+      outline: transparent;
+    }
+
+    &.select:not(:-internal-list-box) {
+      overflow: hidden !important;
+    }
+  }
+
+  select:not(:-internal-list-box) {
+    overflow: hidden !important;
   }
 
   .jq-selectbox__select {
     height: 47px;
-    width: 149px;
+    width: 100%;
     padding: 15px 41px 15px 14px;
     background: $bg;
     border: 1px solid $gray;
@@ -1518,18 +1531,37 @@
 
   .jq-selectbox__trigger-arrow {
     position: absolute;
+    content: "";
     top: 16px;
-    right: 12px;
-    width: 8px;
-    height: 11px;
+    right: 15px;
+    width: 12px;
+    height: 10px;
     border: none;
-    background-image: url('../images/icons/icon-select.svg');
+    // background-image: url('../images/sprite.svg#icon-chevron.svg');
+    background-image: url('../images/icons/icon-chevron.svg');
+    transform: rotate(90deg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    fill: $silver-200;
+    // path{
+    //   fill: $silver-200;
+    //   stroke: $silver-200;
+    // }
+    // svg {
+    //   fill: $silver-200;
+    // }
   }
 
   .jq-selectbox__trigger {
     border: none;
+  }
+
+  .jq-selectbox .placeholder {
+    color: $dark;
+  }
+
+  .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+    border-top-color: transparent;
   }
 
   .jq-selectbox__dropdown:focus-visible {
@@ -1546,13 +1578,13 @@
     color: $bg;
   }
 
-  .jq-selectbox:focus-visible {
-    outline: transparent;
-  }
+  // .jq-selectbox:focus-visible {
+  //   outline: transparent;
+  // }
 
-  .select:focus-visible {
-    outline: transparent;
-  }
+  // .select:focus-visible {
+  //   outline: transparent;
+  // }
 }
 
 .filters {
@@ -1593,22 +1625,167 @@
   }
 
   &__label {
+    cursor: pointer;
+
     &:not(:last-child) {
       margin-bottom: 12px;
     }
   }
 
-  &__checkbox {
-    text-decoration: none;
-  }
-  .jq-checkbox {
+  &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-categories__checkbox {
+    &:checked+.filter-categories__checkbox {
       color: $orange;
     }
   }
 
+  &__checkbox {
+    text-decoration: none;
+    line-height: 1.2;
+    color: $dark;
+  }
 }
 
+.filter-offer {
+  &__form {
+    padding: 25px 15px;
+  }
 
+  &__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:focus+.filter-offer__checkbox {
+      border: 1px solid $orange;
+    }
+
+    &:hover+.filter-offer__checkbox {
+      border: 1px solid $orange;
+
+      &+.filter-offer__text {
+        color: $orange;
+      }
+    }
+
+    &:checked+.filter-offer__checkbox {
+      border: 1px solid $darkblue;
+      background-color: $bgp;
+      background-image: url(../images/icons-main/icon-chevron-checked.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      path {
+        fill: $darkblue;
+      }
+    }
+  }
+
+  &__checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    background-color: $bgp;
+    border: 1px solid $silver-200;
+    border-radius: 3px;
+  }
+
+  &__text {
+    line-height: 1.2;
+  }
+}
+
+.filter-price {
+  &__form {
+    padding: 25px 15px;
+    height: 134px;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $gray;
+  }
+
+  &__item {
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+
+  &__from,
+  &__to {
+    width: 70px;
+    height: 40px;
+    padding-top: 12px;
+    font-size: 16px;
+    line-height: 1;
+    color: $dark;
+    background-color: $bgp;
+    border: 1px solid $bgp;
+    border-radius: 3px;
+    margin: 0 3px;
+  }
+
+  .irs--flat {
+    transform: translateY(40px);
+  }
+
+  .irs--flat .irs-line {
+    top: 35px;
+    height: 2px;
+    background-color: $gray;
+  }
+
+  .irs--flat .irs-bar {
+    top: 35px;
+    height: 2px;
+    background-color: $orange;
+  }
+
+  .irs--flat .irs-handle {
+    top: 27px;
+    width: 18px;
+    height: 18px;
+    background-color: $orange;
+    border-radius: 50%;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+}
