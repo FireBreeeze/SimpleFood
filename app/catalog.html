@@ -43,12 +43,33 @@
             </ul>
             <ul class="menu-btn">
               <li class="menu-btn__item">
-                <button class="menu-btn__btn" type="button">
+                <button class="menu-btn__btn  menu__seach" type="button">
                   <svg class="icon-seach">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
                   </svg>
                   <span class="sr-only">поиск по сайту</span>
                 </button>
+<!-- 
+<div class="popup">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div id="seach">
+        <form action="#">
+          <label>ищем:</label>
+          <input type="text">
+
+          <button type="button" class="btn-seach">GO!</button>
+        </form>
+      </div>
+      <button class="burger close" type="button">
+        <span class="burger__line"></span>
+        <span class="sr-only">закрыть поиск</span>
+      </button>
+    </div>
+  </div>
+</div> -->
+
+
               </li>
               <li class="menu-btn__item">
                 <button class="menu-btn__btn" type="button">
@@ -75,7 +96,7 @@
 
   <main class="main">
 
-    <wrapper class="top">
+    <div class="top">
       <div class="top__wrapper">
         <div class="container">
           <div class="breadcrumbs">
@@ -90,7 +111,7 @@
           </div>
         </div>
       </div>
-    </wrapper>
+    </div>
 
     <section class="catalog section">
       <div class="container">
@@ -379,7 +400,7 @@
                   <a class="pagination__link pagination__decor" href="#">2</a>
                 </li>
                 <li class="pagination__item">
-                  <span class="pagination__link pagination__decor" href="#">...</span>
+                  <span class="pagination__link pagination__decor">...</span>
                 </li>
                 <li class="pagination__item">
                   <a class="pagination__link pagination__decor" href="#">9</a>
@@ -427,6 +448,9 @@
 
           <li class="restaurants__link">
             <article class="restaurant-card">
+              <h3>
+                <span class="sr-only">страница ресторана Blaze Pizza</span>
+              </h3>
               <img class="restaurant-card__img" src="images/restaurant-card/blaze.jpg" width="370" height="300"
                 alt="фотография пиццы из Blaze Pizza">
               <div class="restaurant-card__wrapper catalog__restaurants-wrapper">
@@ -437,6 +461,9 @@
 
           <li class="restaurants__link">
             <article class="restaurant-card">
+                            <h3>
+                              <span class="sr-only">страница ресторана KFC</span>
+                            </h3>
               <img class="restaurant-card__img" src="images/restaurant-card/kfc.jpg" width="370" height="300"
                 alt="фотография картофеля-фри и бургера из KFC">
               <div class="restaurant-card__wrapper catalog__restaurants-wrapper">
@@ -447,6 +474,9 @@
 
           <li class="restaurants__link">
             <article class="restaurant-card">
+              <h3>
+                <span class="sr-only">страница ресторана Star Burgers</span>
+              </h3>
               <img class="restaurant-card__img" src="images/restaurant-card/star.jpg" width="370" height="300"
                 alt="фотография бургера из Star Burgers">
               <div class="restaurant-card__wrapper catalog__restaurants-wrapper">
