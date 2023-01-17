@@ -99,4 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// const button = document.querySelector('.menu__seach');
+// const form = document.querySelector('#seach');
+// const popup = document.querySelector('.popup');
+
+// button.addEventListener('click', () => {
+//   form.classList.add('open');
+//   popup.classList.add('popup_open');
+  
+// });
+  
+
+
+
 var mixer = mixitup('.categories__content');
