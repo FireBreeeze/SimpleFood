@@ -1,6 +1,26 @@
 $(function(){
 
+  $('.catalog-title__btn, .filters-open__burger').on('click', function(){
+    $('.filters-open').toggleClass('filters-open--active');
+    $('body').toggleClass('lock');
+  });
+
+  $('.mobil-burger').on('click', function(){
+    $('.mobil-menu').toggleClass('mobil-menu--active');
+    $('body').toggleClass('lock');
+  });
+
+  $('bodyClassLock').on('click', function(){
+    $('.mobil-menu--active').remove('mobil-menu');
+    $('body').toggleClass('lock');
+  });
+  //НЕ ПОЛУЧАЕТСЯ ЗАКРЫТЬ ВЫПАДАЮЩЕЕ МЕНЮ ПРИ КЛИКЕ НА ЗАТЕМНЕННУЮ ЧАСТЬ ЭКРАНА
+  $('bodyClassLock').on('click', function(){
+    $('.filters-open--active').remove('filters-open');
+    $('body').toggleClass('lock');
+  });
   
+
   $('.filter-price__input').ionRangeSlider({
      type: "double",
      prefix: "₴",
@@ -39,18 +59,6 @@ $(function(){
     prevArrow: '<div class="reviews-arrow reviews-arrow__prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
     nextArrow: '<div class="reviews-arrow reviews-arrow__next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
   }),
-
-
-  // $('.restaurants__list').slick({
-  //   dots: true,
-  //   arrows: false,
-  //   fade: true,
-  //   // autoplay: true,
-  //   autoplaySpeed: 3000,
-  //   infinite: true,
-  //   cssEase: 'linear',
-  //   centerMode: true
-  // });
 
   $(window).on('load resize', function () {
   if ($(window).width() < 620) {
@@ -97,19 +105,60 @@ document.addEventListener('DOMContentLoaded', () => {
     
   });
 
+  $('.menu-list__link, .logo').on("click", function(event){
+    event.preventDefault();
+    const scrollAnchor = $(this).attr('href');
+    let scrollPoint = $(scrollAnchor).offset().top;
+
+    if(scrollAnchor === '#gallery') {
+      scrollPoint = scrollPoint - 65;
+    } 
+
+    if(scrollAnchor === '#contacts') {
+      scrollPoint = scrollPoint - 65;
+    }
+
+    $('html, body').animate({scrollTop: scrollPoint}, 3500);
+    return false;
+  });
+
+    $window = $(window);
+  $window.scroll(function() {
+    $scrollPosition = $window.scrollTop();
+    if ($scrollPosition > 50) {
+      $('.header__top').addClass('header__top--bg');
+    } else {
+      $('.header__top').removeClass('header__top--bg');
+    }
+  });
+
+  $window = $(window);
+  $window.scroll(function() {
+    $scrollPosition = $window.scrollTop();
+    if ($scrollPosition > 50) {
+      $('.header-page__top').addClass('.header-page__top--bg');
+    } else {
+      $('.header-page__top').removeClass('.header-page__top--bg');
+    }
+  });
+
 });
 
-// const button = document.querySelector('.menu__seach');
-// const form = document.querySelector('#seach');
-// const popup = document.querySelector('.popup');
+const button = document.querySelector('.menu__seach');
+const form = document.querySelector('.seach');
+const popup = document.querySelector('.popup');
+const burger = document.querySelector('.popup-burger');
 
-// button.addEventListener('click', () => {
-//   form.classList.add('open');
-//   popup.classList.add('popup_open');
-  
-// });
-  
+button.addEventListener('click', () => {
+  form.classList.add('open');
+  popup.classList.add('popup_open');
+});
+burger.addEventListener('click', () => {
+  form.classList.add('seach');
+  popup.classList.add('popup_close');
+});
 
+  
 
 
 var mixer = mixitup('.categories__content');

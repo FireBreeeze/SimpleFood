@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food Доставка еды</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="body">
+
+  <wrapper class="filters-open mobil-menu">
+
+    <div class="filters-open__top">
+      <div class="container">
+
+        <nav class="filters-open__inner">
+          <button class="mobil-burger burger--active" type="button">
+            <span class="mobil-burger__line burger__line"></span>
+            <span class="sr-only">Закрыть меню</span>
+          </button>
+        </nav>
+      </div>
+      </div>
+    
+
+    <div class="filters-open__content">
+  <div class="filters__inner">
+  
+    <div class="filters__item filter-categories">
+      <h2 class="filters__title">Категории</h2>
+      <form class="filter-categories__form" action="#">
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Бургеры</span>
+        </label>
+  
+        <label class="filter-categories__label checked">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Пицца</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Сендвичи</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Азиатская кухня</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Сеты</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Европейская кухня</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Напитки</span>
+        </label>
+  
+        <label class="filter-categories__label">
+          <input class="filter-categories__input" type="checkbox">
+          <span class="filter-categories__checkbox link">Алкоголь</span>
+        </label>
+      </form>
+    </div>
+  
+    <div class="filters__item filter-offer">
+      <h2 class="filters__title">Предложения</h2>
+      <form class="filter-offer__form" action="#">
+        <label class="filter-offer__label">
+          <input class="filter-offer__input" type="checkbox">
+          <span class="filter-offer__checkbox"></span>
+          <span class="filter-offer__text">Со скидкой</span>
+        </label>
+        <label class="filter-offer__label">
+          <input class="filter-offer__input" type="checkbox" checked>
+          <span class="filter-offer__checkbox"></span>
+          <span class="filter-offer__text">Новинка</span>
+        </label>
+        <label class="filter-offer__label">
+          <input class="filter-offer__input" type="checkbox">
+          <span class="filter-offer__checkbox"></span>
+          <span class="filter-offer__text">Хит</span>
+        </label>
+      </form>
+    </div>
+  
+    <div class="filters__item filter-price">
+      <h2 class="filters__title">Цена</h2>
+      <form class="filter-price__form" action="#">
+        <input class="filter-price__input" type="text" data-min="0" data-max="1200" data-from="100" data-to="1000">
+        <label class="filter-price__label">
+          <span class="filter-price__item">
+            от<span class="filter-price__from"></span>₴
+          </span>
+          <span class="filter-price__item">
+            до<span class="filter-price__to"></span>₴
+          </span>
+        </label>
+      </form>
+    </div>
+  </div>
+</div>
+       
+   
+  </wrapper>
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
