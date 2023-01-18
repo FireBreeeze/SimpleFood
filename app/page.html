@@ -25,22 +25,120 @@
   <div class="header__top">
     <div class="container">
 
+      <wrapper class="mobil-menu">
 
+        <div class="mobil-menu__top">
+          <div class="container">
+
+            <nav class="mobil-menu__inner">
+              <a class="logo" href="#body">
+                <img class="logo__img footer-top__logo-img" src="images/logo/logo.svg" width="200" height="39"
+                  alt="логотип компании">
+              </a>
+              <button class="mobil-burger burger--active" type="button">
+                <span class="mobil-burger__line burger__line"></span>
+                <span class="sr-only">Закрыть меню</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+
+
+        <div class="mobil-menu__content">
+          <div class="mobil-menu__box">
+            <div class="container">
+              <nav class="mobil-menu__menu">
+                <ul class="menu-list mobil-menu__list">
+                  <li class="menu-list__item">
+                    <a class="menu-list__link link menu-list__link--active" href="#hero">Главная</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link link" href="#categories">Блюда</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link link" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-top__address-inner mobil-menu__address">
+            <div class="container">
+              <address class="address">
+                <ul class="address__items">
+                  <li class="address__item address__item">
+                    <a class="address__link link" href="#">
+                      <svg class="icon-location">
+                        <use xlink:href="images/sprite.svg#icon-location"></use>
+                      </svg>
+                      ул. Т.Г.Шевченко, 1
+                    </a>
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link link" href="tel:+380501112233">
+                      <svg class="icon-call">
+                        <use xlink:href="images/sprite.svg#icon-call"></use>
+                      </svg>
+                      380501112233
+                    </a>
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link link" href="mailto:support@sfood.com">
+                      <svg class="icon-message">
+                        <use xlink:href="images/sprite.svg#icon-message"></use>
+                      </svg>
+                      support@sfood.com
+                    </a>
+                  </li>
+                </ul>
+              </address>
+
+              <ul class="social">
+                <li class="social__list">
+                  <a class="social__link" href="#" target="_blank">
+                    <svg class="icon-facebook">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                    <span class="sr-only">ссылка на facebook</span>
+                  </a>
+                </li>
+                <li class="social__list">
+                  <a class="social__link" href="#" target="_blank">
+                    <svg class="icon-twitter">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                    <span class="sr-only">ссылка на twitter</span>
+                  </a>
+                </li>
+                <li class="social__list">
+                  <a class="social__link" href="#" target="_blank">
+                    <svg class="icon-instagram">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                    <span class="sr-only">ссылка на instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </wrapper>
 
       <nav class="menu">
-        <a class="header__logo logo" href="#">
+        <a class="header__logo logo" href="#body">
           <img class="logo__img" src="images/logo/logo.svg" alt="логотип компании">
         </a>
         <div class="menu__inner">
           <ul class="menu-list">
             <li class="menu-list__item">
-              <a href="#" class="menu-list__link link menu-list__link--active">Главная</a>
+              <a class="menu-list__link link menu-list__link--active" href="#hero">Главная</a>
             </li>
             <li class="menu-list__item">
-              <a href="#" class="menu-list__link link">Блюда</a>
+              <a class="menu-list__link link" href="#categories">Блюда</a>
             </li>
             <li class="menu-list__item">
-              <a href="#" class="menu-list__link link">Контакты</a>
+              <a class="menu-list__link link" href="#contacts">Контакты</a>
             </li>
           </ul>
           <ul class="menu-btn">
@@ -64,6 +162,26 @@
           </ul>
         </div>
 
+        <div class="popup">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="seach">
+        <form action="#">
+          <label>ищем:</label>
+          <input type="text">
+
+          <button type="button" class="btn-seach">GO!</button>
+        </form>
+        <button class="popup-burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">закрыть поиск</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
         <button class="burger" type="button">
           <span class="burger__line"></span>
           <span class="sr-only">Открыть меню</span>
@@ -74,9 +192,7 @@
     </div>
   </div>
 
-
-
-  <div class="header-content">
+  <div class="header-content" id="hero">
     <div class="container">
       <div class="header-content__inner">
         <div class="header-content__info">
@@ -90,7 +206,7 @@
           <div class="header-content__text">
             <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
           </div>
-          <a class="header-content__btn btn" href="#">Заказать</a>
+          <a class="header-content__btn btn" href="#catalog">Заказать</a>
           <a class="header-content__link link" href="#">Подробнее</a>
         </div>
         <div class="header-content__img" style="background-image: url('images/bg-images/header-content-bg.png');">
@@ -106,13 +222,13 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" id="contacts">
   <div class="container">
 
     <div class="footer-top">
 
       <div class="footer-top__form-inner">
-        <a class="logo footer-top__logo" href="#">
+        <a class="logo footer-top__logo" href="#body">
           <img class="logo__img footer-top__logo-img" src="images/logo/logo.svg" width="200" height="39"
             alt="логотип компании">
         </a>
