@@ -1,4 +1,74 @@
+// import Swiper, { Navigation, Pagination } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
 $(function(){
+
+
+// Swiper.use([Navigation, Pagination]); 
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   loop: true,
+//   zoom: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+
+$(".star").rateYo({
+    starWidth: "16px",
+    numStars: 10,
+    normalFill: "rgba(193, 193, 193, 0.3);",
+    ratedFill: " #FFB800",
+    readOnly: true,
+});
+
+ $window = $(window);
+  $window.scroll(function() {
+    $scrollPosition = $window.scrollTop();
+    if ($scrollPosition > 50) {
+      $('.header__top').addClass('header__top--bg');
+    } else {
+      $('.header__top').removeClass('header__top--bg');
+    }
+});
+
+$window = $(window);
+  $window.scroll(function() {
+    $scrollPosition = $window.scrollTop();
+    if ($scrollPosition > 50) {
+      $('.header-page__top').addClass('.header-page__top--bg');
+    } else {
+      $('.header-page__top').removeClass('.header-page__top--bg');
+    }
+  });
+
+   $('.menu-list__link, .logo').on("click", function(event){
+    event.preventDefault();
+    const scrollAnchor = $(this).attr('href');
+    let scrollPoint = $(scrollAnchor).offset().top;
+
+    if(scrollAnchor === '#gallery') {
+      scrollPoint = scrollPoint - 65;
+    } 
+
+    if(scrollAnchor === '#contacts') {
+      scrollPoint = scrollPoint - 65;
+    }
+
+    $('html, body').animate({scrollTop: scrollPoint}, 3500);
+    return false;
+  });
 
   $('.catalog-title__btn, .filters-open__burger').on('click', function(){
     $('.filters-open').toggleClass('filters-open--active');
@@ -102,44 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.remove('burger--active');
       }
     });
-    
-  });
-
-  $('.menu-list__link, .logo').on("click", function(event){
-    event.preventDefault();
-    const scrollAnchor = $(this).attr('href');
-    let scrollPoint = $(scrollAnchor).offset().top;
-
-    if(scrollAnchor === '#gallery') {
-      scrollPoint = scrollPoint - 65;
-    } 
-
-    if(scrollAnchor === '#contacts') {
-      scrollPoint = scrollPoint - 65;
-    }
-
-    $('html, body').animate({scrollTop: scrollPoint}, 3500);
-    return false;
-  });
-
-    $window = $(window);
-  $window.scroll(function() {
-    $scrollPosition = $window.scrollTop();
-    if ($scrollPosition > 50) {
-      $('.header__top').addClass('header__top--bg');
-    } else {
-      $('.header__top').removeClass('header__top--bg');
-    }
-  });
-
-  $window = $(window);
-  $window.scroll(function() {
-    $scrollPosition = $window.scrollTop();
-    if ($scrollPosition > 50) {
-      $('.header-page__top').addClass('.header-page__top--bg');
-    } else {
-      $('.header-page__top').removeClass('.header-page__top--bg');
-    }
   });
 
 });
@@ -158,7 +190,8 @@ burger.addEventListener('click', () => {
   popup.classList.add('popup_close');
 });
 
-  
+
+
 
 
 var mixer = mixitup('.categories__content');

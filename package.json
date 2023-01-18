@@ -27,8 +27,9 @@
     "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "optipng-bin": "^9.0.0",
-    "rateyo": "^2.3.2",
+    "rateyo": "^2.3.5",
     "sass": "^1.56.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.4.6"
   }
 }

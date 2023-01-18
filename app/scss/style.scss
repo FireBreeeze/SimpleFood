@@ -1386,7 +1386,7 @@
   left: 15px;
   overflow-y: auto;
   color: $dark;
-  
+
   &--active {
     display: block;
 
@@ -1486,6 +1486,7 @@
 
 .header-page {
   padding-bottom: 0;
+
   &__top {
     @include mq('tablet-2') {
       padding: 14px 0;
@@ -1496,6 +1497,7 @@
     }
   }
 }
+
 .catalog-title {
   &__inner {
     margin-bottom: 60px;
@@ -1961,4 +1963,35 @@
 
 .app-catalog {
   padding-top: 60px;
+}
+
+.product-one {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  &__item-star{
+    // height: 16px;
+  }
+}
+
+.product-slide{
+  &__img{
+    width: 400px;
+    height: 400px;
+  }
 }
