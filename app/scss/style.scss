@@ -352,6 +352,7 @@
     display: flex;
     white-space: nowrap;
     margin-bottom: 45px;
+    margin-left: 4px;
     overflow-x: auto;
     padding-bottom: 15px;
 
@@ -373,6 +374,7 @@
 
   &__btn-link {
     padding: 12px 30px;
+    margin: 2px auto;
     display: flex;
     align-items: center;
 
@@ -450,7 +452,7 @@
   border-radius: 5px;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 2px auto;
 
   &__img {
     margin: 0 auto 10px;
@@ -926,7 +928,6 @@
     }
   }
 
-
   .reviews-arrow {
     content: "";
     position: absolute;
@@ -939,10 +940,13 @@
     border-radius: 50%;
     line-height: 0;
     font-size: 0;
-    padding: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
 
-    &__prev {
+    &--prev {
       right: 57%;
       transform: rotateY(180deg);
 
@@ -955,7 +959,7 @@
       }
     }
 
-    &__next {
+    &--next {
       right: 39%;
 
       @include mq('tablet-2') {
@@ -1006,7 +1010,6 @@
     }
   }
 
-
   .slick-disabled {
     border: 3px solid $orange-2;
 
@@ -1016,6 +1019,9 @@
     }
   }
 }
+
+
+
 
 .app {
   padding-top: 75px;
@@ -1965,33 +1971,395 @@
   padding-top: 60px;
 }
 
-.product-one {
-  &__inner {
-    display: flex;
-    justify-content: space-between;
+.product {
+  &__top {
+    @include mq('tablet-2') {
+      margin-bottom: 0;
+    }
   }
 
-  &__slide {
-    width: 100%;
-    height: 100%;
-    background-color: $bg;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__title{
-    font-weight: 500;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  &__item-star{
-    // height: 16px;
+  @include mq('tablet-2') {
+    padding: 30px 0;
+    margin-bottom: 0;
   }
 }
 
-.product-slide{
-  &__img{
+.product-one {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    max-width: 530px;
+    width: 100%;
+  }
+
+  &__slide {
+    max-width: 610px;
+    width: 100%;
+    height: 550px;
+    margin-right: 30px;
+    background-color: $bg;
+
+    @include mq('desktop') {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @include mq('phone') {
+      height: 345px;
+    }
+  }
+
+  &__title {
+    text-align: start;
+    margin-bottom: 30px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-star {
+    margin-bottom: 25px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 15px;
+    }
+
+    .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group {
+      & svg {
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+
+    .jq-ry-group-wrapper {
+      width: 104px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  &__form {
+    margin-bottom: 30px;
+    display: flex;
+
+    .jq-number {
+      padding: 0;
+    }
+
+    @include mq('phone') {
+      display: block;
+    }
+  }
+
+  &__input {
+    margin-right: 20px;
+
+    .jq-number__field {
+      width: 158px;
+      height: 44px;
+      border: none;
+      background-color: $bgp;
+      box-shadow: none;
+    }
+
+    .jq-number__field input {
+      padding: 10px 17px;
+      background: none;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 400;
+      font-family: Rubik;
+      color: $darkblue;
+      text-align: center;
+    }
+
+    .jq-number__spin {
+      position: absolute;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      background: $orange;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:hover {
+        background: #63A60E;
+        box-shadow: inset 0 0 0 24px rgba(0, 0, 0, 0.15);
+      }
+
+      &.minus {
+        left: 0;
+        border-radius: 3px 0px 0px 3px;
+
+        &::after {
+          border: none;
+          @include pseudo;
+          width: 20px;
+          height: 2px;
+          top: 50%;
+          left: 12px;
+          background-color: $bg;
+        }
+      }
+
+      &.plus {
+        right: 0;
+        border-radius: 0px 3px 3px 0px;
+
+        &::after {
+          border: none;
+          @include pseudo;
+          width: 20px;
+          height: 2px;
+          top: 50%;
+          left: 13px;
+          background-color: $bg;
+        }
+
+        &::before {
+          @include pseudo;
+          width: 2px;
+          height: 20px;
+          top: 12px;
+          left: 50%;
+          background-color: $bg;
+        }
+      }
+    }
+
+    @include mq('phone') {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 13px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 16px;
+      width: 16px;
+      height: 16px;
+      fill: $orange;
+      stroke: $bg;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__line {
+    margin-bottom: 20px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #505050;
+
+    @include mq('tablet-2') {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.product-slide {
+  &__item {
+    width: 610px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
     width: 400px;
     height: 400px;
+    padding-top: 120px;
+
+    @include mq('phone') {
+      height: 345px;
+      padding-top: 0;
+    }
+  }
+
+  .card-arrow {
+    content: "";
+    position: absolute;
+    top: 44%;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+    svg {
+      width: 19px;
+      height: 32px;
+      fill: $darkblue;
+      stroke: $darkblue;
+    }
+
+    &--prev {
+      left: 25px;
+      transform: rotateY(180deg);
+    }
+
+    &--next {
+      right: 25px;
+    }
+
+    &:focus {
+      background-color: $bgc;
+      border: 3px solid $gray;
+      box-shadow: 0 0 0 2px $bs;
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 3px solid #FFAE94;
+
+      svg {
+        fill: #FFAE94;
+        stroke: #FFAE94;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border: 3px solid #FFF2ED;
+
+      svg {
+        fill: $orange-2;
+        stroke: $orange-2;
+      }
+    }
+  }
+}
+
+.interesting {
+  &__title {
+    margin-bottom: 60px;
+    text-align: start;
+  }
+
+  @include mq('tablet-2') {
+    padding-bottom: 0;
+  }
+}
+
+.interesting-slide {
+  &__item{
+    margin: 0 3px;
+  }
+  .slick-dots {
+    display: inline-flex;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    z-index: 0;
+
+    li {
+      display: block;
+      line-height: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $gray;
+      font-size: 0;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    .slick-active {
+      background-color: $orange;
+    }
+  }
+
+  .arrow {
+    content: "";
+    position: absolute;
+    top: -105px;
+    z-index: 1;
+    background-color: $bgc-1;
+    border: 3px solid $gray;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    line-height: 0;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
+
+    &--prev {
+      right: 59px;
+      transform: rotateY(180deg);
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &:focus {
+      background-color: $bgc;
+      border: 3px solid $gray;
+      box-shadow: 0 0 0 2px $bs;
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 3px solid #FFAE94;
+
+      svg {
+        fill: #FFAE94;
+        stroke: #FFAE94;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border: 3px solid #FFF2ED;
+
+      svg {
+        fill: $orange-2;
+        stroke: $orange-2;
+      }
+    }
+
+    @include mq('tablet') {
+      top: -92px;
+    }
   }
 }

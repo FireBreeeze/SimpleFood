@@ -1,35 +1,68 @@
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
 $(function(){
 
+  $('.interesting-slide').slick({
+    dots: false,
+    // arrows: true,
+    // fade: false,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    infinite: true,
+    slidesToShow: 5,
+    responsive: [
+      { breakpoint: 1231,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      { breakpoint: 993,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      { breakpoint: 769,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 3,
+        }
+      },
+      { breakpoint: 577,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 3,
+        }
+      },
+    ],
+    prevArrow: '<div class="arrow arrow--prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
+    nextArrow: '<div class="arrow arrow--next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
+  }),
 
-// Swiper.use([Navigation, Pagination]); 
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   loop: true,
-//   zoom: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+  $('.product-slide').slick({
+    dots: false,
+    // dots: true,
+    arrows: true,
+    // fade: false,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 577,
+        settings: {
+          arrows: false,
+        }
+      }
+    ],
+    prevArrow: '<div class="card-arrow card-arrow--prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 19 32"></use></svg></div>',
+    nextArrow: '<div class="card-arrow card-arrow--next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 19 32"></use></svg></div>',
+  }),
 
 $(".star").rateYo({
     starWidth: "16px",
-    numStars: 10,
     normalFill: "rgba(193, 193, 193, 0.3);",
-    ratedFill: " #FFB800",
+    ratedFill: "#FFB800",
     readOnly: true,
 });
 
@@ -109,7 +142,7 @@ $window = $(window);
   // $('.mobil-burger').add('burger--active');
   // $('.mobil-burger--active').remove('burger');
 
-  $('.select-style').styler();
+  $('.select-style, .product-one__input').styler();
 
   $('.reviews__slider').slick({
     dots: true,
@@ -126,8 +159,8 @@ $window = $(window);
         }
       }
     ],
-    prevArrow: '<div class="reviews-arrow reviews-arrow__prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
-    nextArrow: '<div class="reviews-arrow reviews-arrow__next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
+    prevArrow: '<div class="reviews-arrow reviews-arrow--prev"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
+    nextArrow: '<div class="reviews-arrow reviews-arrow--next"><svg class="icon-chevron"><use xlink:href="images/sprite.svg#icon-chevron" viewBox="0 0 11 18"></use></svg></div>',
   }),
 
   $(window).on('load resize', function () {
@@ -144,6 +177,35 @@ $window = $(window);
     $(".restaurants__list.slick-initialized").slick("unslick");
   }
 });
+
+
+
+// $(window).on('load resize', function () {
+//   if ($(window).width() < 620) {
+//    $('.interesting-slide').slick({
+//     arrows: true,
+//     dots: false,
+//     // autoplay: true,
+//     slidesToShow: 5,
+//     // slidesToScroll: 3,
+//     infinite: true,
+//       responsive: [
+//       {
+//         breakpoint: 621,
+//         settings: {
+//           dots: true,
+//           arrows: false,
+//         }
+//       }
+//     ],
+//    });
+//   } else {
+//     $('.interesting-slide.slick-initialized').slick('unslick');
+//   }
+// });
+
+
+
 
 });
 
@@ -195,3 +257,27 @@ burger.addEventListener('click', () => {
 
 
 var mixer = mixitup('.categories__content');
+
+// import Swiper, { Navigation, Pagination } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
+// Swiper.use([Navigation, Pagination]); 
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   loop: true,
+//   zoom: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });

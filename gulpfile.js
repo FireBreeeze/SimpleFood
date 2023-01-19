@@ -37,7 +37,7 @@ function styles() {
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
-      grid: true
+      grid: true,
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
