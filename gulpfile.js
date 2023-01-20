@@ -37,7 +37,7 @@ function styles() {
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
-      grid: true
+      grid: true,
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
@@ -51,6 +51,8 @@ function scripts() {
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    // 'node_modules/@fancyapps/ui/dist/fancybox.esm.js',
+    // 'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])

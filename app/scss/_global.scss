@@ -55,6 +55,16 @@ body {
   }
 }
 
+.subtitle {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  @include mq('tablet') {
+    font-size: 18px;
+  }
+}
+
 .text {
   line-height: 1.5;
   color: $dark;
@@ -274,6 +284,11 @@ body {
   height: 20px;
 }
 
+.icon-star {
+  width: 16px;
+  height: 16px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -330,6 +345,12 @@ body {
         background-position: center right;
         background-size: contain;
       }
+    }
+  }
+
+  &__hidden {
+    @include mq('phone') {
+      display: none;
     }
   }
 }
@@ -436,7 +457,8 @@ body {
 .popup_open {
   display: block;
 }
-.popup_close{
+
+.popup_close {
   display: none;
 }
 
@@ -471,14 +493,17 @@ body {
   &:hover {
     background-color: $bgo;
   }
-  &--active{
+
+  &--active {
     display: none;
   }
-  
+
 }
-.popup-burger--active{
+
+.popup-burger--active {
   // display: none;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -488,3 +513,81 @@ body {
     opacity: 1;
   }
 }
+
+.line {
+  margin: 0;
+  padding: 0;
+  border: 1px solid $e4;
+}
+
+.carousel {
+  --carousel-button-color: #170724;
+  --carousel-button-bg: #fff;
+  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+    0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
+  --carousel-button-svg-width: 20px;
+  --carousel-button-svg-height: 20px;
+  --carousel-button-svg-stroke-width: 2.5;
+}
+
+.carousel .carousel__slide {
+  width: 30%;
+  padding: 10px;
+}
+
+.carousel .carousel__button.is-prev {
+  left: -1.5rem;
+}
+
+.carousel .carousel__button.is-next {
+  right: -1.5rem;
+}
+
+.carousel .carousel__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #A78BFA;
+}
+
+.fancybox__container {
+  --fancybox-bg: #fff;
+  --fancybox-color: #4B5563;
+
+  --carousel-button-width: 50px;
+  --carousel-button-height: 50px;
+  --carousel-button-bg: rgba(255, 255, 255, 0.9);
+
+  --carousel-button-svg-stroke-width: 1.8;
+  --carousel-button-svg-filter: none;
+}
+
+.fancybox__caption {
+  padding: 1rem 4rem 0 4rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+// .carousel {
+//   color: #170724;
+
+//   --carousel-button-bg: #fff;
+//   --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
+//   --carousel-button-svg-width: 20px;
+//   --carousel-button-svg-height: 20px;
+//   --carousel-button-svg-stroke-width: 2.5;
+// }
+
+// .carousel__slide {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 80%;
+//   height: 160px;
+//   margin-right: 6px;
+
+//   background-color: #eee;
+//   border-radius: 6px;
+// }
