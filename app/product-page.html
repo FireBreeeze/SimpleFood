@@ -225,19 +225,20 @@
 
         <div class="product-one">
           <div class="product-one__inner">
-              <ul class="product-one__slide product-slide">
-                <li class="product-slide__item">
-                  <img class="product-card__img product-slide__img" src="images/product/1.jpg"
-                    alt="чизбургер с листьями салата">
-                </li>
-                <li class="product-slide__item">
-                  <img class="product-card__img product-slide__img" src="images/product/2.jpg" alt="чизбургер с листьями салата">
-                </li>
-                <li class="product-slide__item">
-                  <img class="product-card__img product-slide__img" src="images/product/3.jpg" alt="чизбургер с листьями салата">
-                </li>
-              </ul>
-
+            <ul class="product-one__slide product-slide">
+              <li class="product-slide__item">
+                <img class="product-card__img product-slide__img" src="images/product/1.jpg"
+                  alt="чизбургер с листьями салата">
+              </li>
+              <li class="product-slide__item">
+                <img class="product-card__img product-slide__img" src="images/product/2.jpg"
+                  alt="чизбургер с листьями салата">
+              </li>
+              <li class="product-slide__item">
+                <img class="product-card__img product-slide__img" src="images/product/3.jpg"
+                  alt="чизбургер с листьями салата">
+              </li>
+            </ul>
 
             <div class="product-one__content">
               <h2 class="product-one__title title">Чизбургер с листьями салата</h2>
@@ -272,9 +273,150 @@
 
     <div class="line"></div>
 
-    <section class="product-tabs section">
-      <div class="container">
+    <section class="tabs section">
+      <div class="container tabs__container">
+        <div class="tabs__top">
+          <a class="tabs__top-item tabs__top-item--active subtitle" href="#tab-1">Описание</a>
+          <a class="tabs__top-item subtitle" href="#tab-2">Характеристики</a>
+          <a class="tabs__top-item subtitle" href="#tab-3">Отзывы
+            <span class="tabs__top-value">(2)</span>
+          </a>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__content-item description tabs__content-item--active" id="tab-1">
+            <p class="description__text">
+              Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом, горчицей, луком и маринованными огурчиками.
+            </p>
+            <p class="description__text">
+              Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
+            </p>
+            <p class="description__text">
+              Внешний вид товара может отличаться от изображений, представленных на сайте.
+            </p>
+          </div>
 
+
+
+          <div class="tabs__content-item specification" id="tab-2">
+            <p class="specification__subtitle">Диаметр:
+              <span class="specification__text"> 20 см</span>
+            </p>
+            <p class="specification__subtitle">Вес:
+              <span class="specification__text">300 гр</span>
+            </p>
+            <p class="specification__subtitle">Калорийность (на 100г):
+              <span class="specification__text">295 ккал</span>
+            </p>
+            <p class="specification__subtitle">Срок хранения:
+              <span class="specification__text">до 3 дней</span>
+            </p>
+          </div>
+
+          <div class="tabs__content-item comments" id="tab-3">
+            <div class="comments__items">
+              <h3 class="comments__title subtitle">Мнения наших клиентов</h3>
+              <div class="comments__item">
+                <div class="comments__content">
+                  <div class="comments__content-top">
+                    <img class="comments__img" src="images/comments/1.jpg" alt="">
+                    <div class="comments__content-info">
+                      <span class="comments__content-name">Андрей</span>
+                      <time class="comments__content-date" datetime="10.06.2021">10.06.2021</time>
+                    </div>
+                  </div>
+                  <div class="star comments__content-star" data-rateyo-rating="5"></div>
+                </div>
+                <div class="comments__content-text">
+                  <p>Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))</p>
+                </div>
+              </div>
+              <div class="line comments__line"></div>
+              <div class="comments__item">
+                <div class="comments__content">
+                  <div class="comments__content-top">
+                    <img class="comments__img" src="images/comments/1.jpg" alt="">
+                    <div class="comments__content-info">
+                      <span class="comments__content-name">Екатерина Белая</span>
+                      <time class="comments__content-date" datetime="10.06.2021">7.06.2021</time>
+                    </div>
+                  </div>
+                  <div class="star comments__content-star" data-rateyo-rating="4"></div>
+                </div>
+                <div class="comments__content-text">
+                  <p>этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить.
+                    Это отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу</p>
+                </div>
+              </div>
+            </div>
+            <form class="comments__form" action="#">
+              <h3 class="comments__title subtitle">Оставить отзыв</h3>
+              <div class="comments__rating ">
+                <span class="comments__rating-name">Ваша оценка *</span>
+                <div class="comments__star rating-area">
+                  <label class="comments__label" for="star-1" title="Оценка «1»">
+                    <input class="comments__input" type="radio" id="star-1" name="rating" value="1">
+                    <span class="comments__radio">
+                      <svg class="icon-star">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                      </svg></span>
+                  </label>
+                  <label class="comments__label" for="star-2" title="Оценка «2»">
+                    <input class="comments__input" type="radio" id="star-2" name="rating" value="2">
+                    <span class="comments__radio">
+                      <svg class="icon-star">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                      </svg></span>
+                  </label>
+                  <label class="comments__label" for="star-3" title="Оценка «3»">
+                    <input class="comments__input" type="radio" id="star-3" name="rating" value="3">
+                    <span class="comments__radio">
+                      <svg class="icon-star">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                      </svg></span>
+                  </label>
+                  <label class="comments__label" for="star-4" title="Оценка «4»">
+                    <input class="comments__input" type="radio" id="star-4" name="rating" value="4">
+                    <span class="comments__radio">
+                      <svg class="icon-star">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                      </svg></span>
+                  </label>
+                  <label class="comments__label" for="star-5" title="Оценка «5»">
+                    <input class="comments__input" type="radio" id="star-5" name="rating" value="5">
+                    <span class="comments__radio">
+                      <svg class="icon-star">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                      </svg></span>
+                  </label>
+                </div>
+              </div>
+              <div class="comments__box-input">
+                <label class="comments__label-text">
+                  <span class="comments__form-name">Ваш отзыв *</span>
+                  <textarea class="comments__textarea" placeholder="Введите текст отзыва"></textarea>
+                </label>
+                <div class="comments__inner">
+                  <label class="comments__label-text">
+                    <span class="comments__form-name">Имя</span>
+                    <input class="comments__input-text" type="text" placeholder="Введите текст отзыва">
+                  </label>
+                  <label class="comments__label-text">
+                    <span class="comments__form-name">Email *</span>
+                    <input class="comments__input-text" type="text" placeholder="youremail@mail.com">
+                  </label>
+                </div>
+              </div>
+              <label class="comments__save">
+                <input class="comments__checkbox" type="checkbox">
+                <div class="comments__save-text">
+                  <p>Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</p>
+                </div>
+              </label>
+              <button class="comments__btn btn" type="submit">Оставить отзыв</button>
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
 

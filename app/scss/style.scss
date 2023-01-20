@@ -2276,9 +2276,10 @@
 }
 
 .interesting-slide {
-  &__item{
+  &__item {
     margin: 0 3px;
   }
+
   .slick-dots {
     display: inline-flex;
     left: 50%;
@@ -2360,6 +2361,299 @@
 
     @include mq('tablet') {
       top: -92px;
+    }
+  }
+}
+
+.tabs {
+  padding: 30px 0 60px;
+  color: #505050;
+
+  &__container {
+    max-width: 720px;
+  }
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__top-item {
+    display: inline-block;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &--active {
+      color: $orange;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &.tabs__content-item--active {
+      display: block;
+      //два класса находятся вместе
+    }
+  }
+}
+
+.comments {
+  &__items {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content-top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 70px;
+    width: 100%;
+    height: 70px;
+    margin-right: 25px;
+  }
+
+  &__content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__content-name {
+    // display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__content-date {
+    line-height: 1.5;
+  }
+
+  &__content-star {
+    & svg {
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .jq-ry-group-wrapper {
+      width: 104px;
+    }
+  }
+
+  &__line {
+    margin-bottom: 25px;
+  }
+
+  &__rating {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating-name {
+    margin-right: 15px;
+  }
+
+  &__input {
+    @extend %radio-hidden;
+  }
+
+  &__form-name {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__radio {
+    margin-right: 6px;
+
+    svg {
+      fill: #c1c1c1;
+    }
+
+    &:checked+.comments__label {
+      svg {
+        fill: #FFB800;
+      }
+    }
+  }
+
+  &__box-input {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textarea {
+    border: 1px solid $gray;
+    height: 165px;
+    width: 400px;
+    padding: 16px 18px;
+    display: block;
+    resize: none;
+    margin-bottom: 30px;
+    margin-right: 30px;
+
+    &::placeholder {
+      font-size: 16px;
+      color: #c1c1c1;
+    }
+  }
+
+  &__label-text {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input-text {
+    width: 260px;
+    display: inline-block;
+    padding: 18px;
+    height: 57px;
+    border: 1px solid $gray;
+
+    &::placeholder {
+      font-size: 16px;
+      color: #c1c1c1;
+    }
+  }
+
+  &__save {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 18px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: $bg;
+      border: 1px solid #C1C1C1;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox-hidden;
+  }
+
+  &__save-text {
+    margin-left: 30px;
+  }
+
+  &__btn {
+    display: block;
+    padding: 12px 32px;
+  }
+}
+
+.rating-area {
+  overflow: hidden;
+}
+
+.rating-area:not(:checked)>input {
+  display: none;
+}
+
+.rating-area:not(:checked)>label {
+  float: right;
+  // width: 24px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+
+  svg {
+    fill: #c1c1c1;
+  }
+}
+
+.rating-area:not(:checked)>label:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+}
+
+.rating-area>input:checked~label {
+  svg {
+    fill: #FFB800;
+  }
+}
+
+.rating-area:not(:checked)>label:hover,
+.rating-area:not(:checked)>label:hover~label {
+  svg {
+    fill: #FFB800;
+  }
+}
+
+.rating-area>input:checked+label:hover,
+.rating-area>input:checked+label:hover~label,
+.rating-area>input:checked~label:hover,
+.rating-area>input:checked~label:hover~label,
+.rating-area>label:hover~input:checked~label {
+  svg {
+    fill: #FFB800;
+  }
+}
+
+.rate-area>label:active {
+  position: relative;
+}
+
+.specification {
+  &__subtitle {
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: $dark;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    margin-left: 5px;
+  }
+}
+
+.description{
+  &__text{
+    line-height: 1.5;
+    color: $dark;
+    opacity: 0.9;
+    &:not(:last-child){
+      margin-bottom: 30px;
     }
   }
 }
