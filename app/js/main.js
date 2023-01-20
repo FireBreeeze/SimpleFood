@@ -1,5 +1,29 @@
 $(function(){
 
+// // Initialise Carousel
+// const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+//   preload: 2,
+// });
+
+// Customize Fancybox
+// Fancybox.bind('[data-fancybox="gallery"]', {
+//   Thumbs: false,
+//   Toolbar: false,
+
+//   closeButton: "top",
+
+//   Carousel: {
+//     Dots: true,
+//     on: {
+//       change: (that) => {
+//         myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+//           friction: 0,
+//         });
+//       },
+//     },
+//   },
+// });
+
   $('.tabs__top-item').on('click', function(e){
 
     e.preventDefault(); //отменяет стандартную обработку по ссылке

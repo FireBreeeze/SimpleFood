@@ -2369,12 +2369,19 @@
   padding: 30px 0 60px;
   color: #505050;
 
+  @include mq('tablet-2') {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+
   &__container {
     max-width: 720px;
   }
 
   &__top {
     margin-bottom: 30px;
+    white-space: nowrap;
+    overflow-x: auto;
   }
 
   &__top-item {
@@ -2383,10 +2390,18 @@
 
     &:not(:last-child) {
       margin-right: 60px;
+
+      @include mq('tablet') {
+        margin-right: 30px;
+      }
     }
 
     &--active {
       color: $orange;
+    }
+
+    @include mq('tablet') {
+      font-size: 20px;
     }
   }
 
@@ -2408,6 +2423,10 @@
   &__title {
     font-weight: 500;
     margin-bottom: 30px;
+
+    @include mq('tablet') {
+      font-size: 20px;
+    }
   }
 
   &__item {
@@ -2420,11 +2439,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 45px;
+    }
   }
 
   &__content-top {
     display: flex;
     align-items: center;
+
+    @include mq('phone') {
+      margin-bottom: 15px;
+    }
   }
 
   &__img {
@@ -2432,6 +2461,12 @@
     width: 100%;
     height: 70px;
     margin-right: 25px;
+  }
+
+  &__content-text {
+    @include mq('tablet') {
+      font-size: 16px;
+    }
   }
 
   &__content-info {
@@ -2502,6 +2537,11 @@
   &__box-input {
     display: flex;
     justify-content: space-between;
+
+    @include mq('tablet') {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
 
   &__inner {
@@ -2523,11 +2563,21 @@
       font-size: 16px;
       color: #c1c1c1;
     }
+
+    @include mq('tablet') {
+      width: 100%;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
   }
 
   &__label-text {
     &:not(:last-child) {
       margin-bottom: 10px;
+
+      @include mq('tablet') {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -2541,6 +2591,10 @@
     &::placeholder {
       font-size: 16px;
       color: #c1c1c1;
+    }
+
+    @include mq('tablet') {
+      width: 100%;
     }
   }
 
@@ -2645,15 +2699,24 @@
     font-weight: 400;
     margin-left: 5px;
   }
+
+  @include mq('tablet') {
+    font-size: 16px;
+  }
 }
 
-.description{
-  &__text{
+.description {
+  &__text {
     line-height: 1.5;
     color: $dark;
     opacity: 0.9;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    @include mq('tablet') {
+      font-size: 16px;
     }
   }
 }
